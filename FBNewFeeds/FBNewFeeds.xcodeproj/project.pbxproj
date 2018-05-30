@@ -7,21 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9562B51720BD294900C8F236 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562B51620BD294900C8F236 /* Utilities.swift */; };
 		95EA50A420BBF2F700B298AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EA50A320BBF2F700B298AA /* AppDelegate.swift */; };
-		95EA50A620BBF2F700B298AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EA50A520BBF2F700B298AA /* ViewController.swift */; };
-		95EA50A920BBF2F700B298AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95EA50A720BBF2F700B298AA /* Main.storyboard */; };
 		95EA50AB20BBF2F800B298AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95EA50AA20BBF2F800B298AA /* Assets.xcassets */; };
 		95EA50AE20BBF2F800B298AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95EA50AC20BBF2F800B298AA /* LaunchScreen.storyboard */; };
+		95EA50BA20BBF9FD00B298AA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EA50B820BBF9FD00B298AA /* LoginViewController.swift */; };
+		95EA50BB20BBF9FD00B298AA /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95EA50B920BBF9FD00B298AA /* LoginViewController.xib */; };
+		95EF922E20BBFA8C00998D8D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EF922C20BBFA8C00998D8D /* ProfileViewController.swift */; };
+		95EF922F20BBFA8C00998D8D /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95EF922D20BBFA8C00998D8D /* ProfileViewController.xib */; };
+		95EF923220BBFAA800998D8D /* NewfeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EF923020BBFAA800998D8D /* NewfeedsViewController.swift */; };
+		95EF923320BBFAA800998D8D /* NewfeedsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95EF923120BBFAA800998D8D /* NewfeedsViewController.xib */; };
+		95EF923720BBFB2200998D8D /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EF923620BBFB2200998D8D /* UIViewControllerExtension.swift */; };
+		95EF923A20BC01C700998D8D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EF923920BC01C700998D8D /* BaseNavigationController.swift */; };
+		95EF923D20BC028B00998D8D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EF923C20BC028B00998D8D /* MainTabBarController.swift */; };
+		95EF923F20BC05B500998D8D /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EF923E20BC05B500998D8D /* UIImageExtension.swift */; };
+		95EF924120BC089000998D8D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EF924020BC089000998D8D /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9562B51620BD294900C8F236 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		95EA50A020BBF2F700B298AA /* FBNewFeeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBNewFeeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95EA50A320BBF2F700B298AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		95EA50A520BBF2F700B298AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		95EA50A820BBF2F700B298AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		95EA50AA20BBF2F800B298AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95EA50AD20BBF2F800B298AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95EA50AF20BBF2F800B298AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95EA50B820BBF9FD00B298AA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		95EA50B920BBF9FD00B298AA /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		95EF922C20BBFA8C00998D8D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		95EF922D20BBFA8C00998D8D /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		95EF923020BBFAA800998D8D /* NewfeedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewfeedsViewController.swift; sourceTree = "<group>"; };
+		95EF923120BBFAA800998D8D /* NewfeedsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewfeedsViewController.xib; sourceTree = "<group>"; };
+		95EF923620BBFB2200998D8D /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		95EF923920BC01C700998D8D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		95EF923C20BC028B00998D8D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		95EF923E20BC05B500998D8D /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		95EF924020BC089000998D8D /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9562B51520BD292500C8F236 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9562B51620BD294900C8F236 /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		95EA509720BBF2F700B298AA = {
 			isa = PBXGroup;
 			children = (
@@ -54,14 +82,72 @@
 		95EA50A220BBF2F700B298AA /* FBNewFeeds */ = {
 			isa = PBXGroup;
 			children = (
+				9562B51520BD292500C8F236 /* Utilities */,
+				95EF923B20BC025800998D8D /* TabBar */,
+				95EF923820BC019700998D8D /* BaseController */,
+				95EF923520BBFAED00998D8D /* Extensions */,
+				95EA50B720BBF9D200B298AA /* NewFeeds */,
+				95EA50B620BBF9BB00B298AA /* Profile */,
+				95EA50B520BBF9B100B298AA /* Login */,
 				95EA50A320BBF2F700B298AA /* AppDelegate.swift */,
-				95EA50A520BBF2F700B298AA /* ViewController.swift */,
-				95EA50A720BBF2F700B298AA /* Main.storyboard */,
-				95EA50AA20BBF2F800B298AA /* Assets.xcassets */,
 				95EA50AC20BBF2F800B298AA /* LaunchScreen.storyboard */,
 				95EA50AF20BBF2F800B298AA /* Info.plist */,
+				95EA50AA20BBF2F800B298AA /* Assets.xcassets */,
 			);
 			path = FBNewFeeds;
+			sourceTree = "<group>";
+		};
+		95EA50B520BBF9B100B298AA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				95EA50B820BBF9FD00B298AA /* LoginViewController.swift */,
+				95EA50B920BBF9FD00B298AA /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		95EA50B620BBF9BB00B298AA /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				95EF922C20BBFA8C00998D8D /* ProfileViewController.swift */,
+				95EF922D20BBFA8C00998D8D /* ProfileViewController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		95EA50B720BBF9D200B298AA /* NewFeeds */ = {
+			isa = PBXGroup;
+			children = (
+				95EF923020BBFAA800998D8D /* NewfeedsViewController.swift */,
+				95EF923120BBFAA800998D8D /* NewfeedsViewController.xib */,
+			);
+			path = NewFeeds;
+			sourceTree = "<group>";
+		};
+		95EF923520BBFAED00998D8D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				95EF923620BBFB2200998D8D /* UIViewControllerExtension.swift */,
+				95EF923E20BC05B500998D8D /* UIImageExtension.swift */,
+				95EF924020BC089000998D8D /* UIColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		95EF923820BC019700998D8D /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+				95EF923920BC01C700998D8D /* BaseNavigationController.swift */,
+			);
+			path = BaseController;
+			sourceTree = "<group>";
+		};
+		95EF923B20BC025800998D8D /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				95EF923C20BC028B00998D8D /* MainTabBarController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,9 +209,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95EA50BB20BBF9FD00B298AA /* LoginViewController.xib in Resources */,
 				95EA50AE20BBF2F800B298AA /* LaunchScreen.storyboard in Resources */,
 				95EA50AB20BBF2F800B298AA /* Assets.xcassets in Resources */,
-				95EA50A920BBF2F700B298AA /* Main.storyboard in Resources */,
+				95EF923320BBFAA800998D8D /* NewfeedsViewController.xib in Resources */,
+				95EF922F20BBFA8C00998D8D /* ProfileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +231,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelseecho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse echo \"warning: SwiftLint not installed\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -152,7 +240,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95EA50A620BBF2F700B298AA /* ViewController.swift in Sources */,
+				95EA50BA20BBF9FD00B298AA /* LoginViewController.swift in Sources */,
+				95EF922E20BBFA8C00998D8D /* ProfileViewController.swift in Sources */,
+				95EF923A20BC01C700998D8D /* BaseNavigationController.swift in Sources */,
+				95EF923F20BC05B500998D8D /* UIImageExtension.swift in Sources */,
+				95EF923D20BC028B00998D8D /* MainTabBarController.swift in Sources */,
+				95EF924120BC089000998D8D /* UIColorExtension.swift in Sources */,
+				95EF923220BBFAA800998D8D /* NewfeedsViewController.swift in Sources */,
+				95EF923720BBFB2200998D8D /* UIViewControllerExtension.swift in Sources */,
+				9562B51720BD294900C8F236 /* Utilities.swift in Sources */,
 				95EA50A420BBF2F700B298AA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,14 +256,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		95EA50A720BBF2F700B298AA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				95EA50A820BBF2F700B298AA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		95EA50AC20BBF2F800B298AA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
