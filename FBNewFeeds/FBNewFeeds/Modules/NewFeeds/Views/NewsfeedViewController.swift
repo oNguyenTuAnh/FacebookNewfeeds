@@ -14,6 +14,13 @@ class NewsfeedViewController: BaseViewController {
 
     let viewModel = NewsFeedViewModel()
     let cellIdentifier = "feelCell"
+    let heightHeaderTableView: CGFloat = 90.0
+
+    lazy var storyView: StoryView? = {
+        let view = StoryView.initWithDefaultNib()
+        view?.frame = CGRect(x: 0, y: 0, width: newsFeedTableView.bounds.width, height: heightHeaderTableView)
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +35,11 @@ class NewsfeedViewController: BaseViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic-messenger"),
             style: .plain, target: nil, action: nil)
         newsFeedTableView.register(FeedTableViewCell.nibDefault(), forCellReuseIdentifier: cellIdentifier)
+        if let headerView = storyView {
+            let tableViewHeader = UIView(frame: headerView.frame)
+            tableViewHeader.addSubview(headerView)
+            newsFeedTableView.tableHeaderView = tableViewHeader
+        }
     }
 
     func getData() {
@@ -45,6 +57,7 @@ class NewsfeedViewController: BaseViewController {
 
     func refreshView() {
         newsFeedTableView.reloadData()
+        storyView?.reloadData(viewModel.getStoryData())
     }
 
     func showProfile() {
