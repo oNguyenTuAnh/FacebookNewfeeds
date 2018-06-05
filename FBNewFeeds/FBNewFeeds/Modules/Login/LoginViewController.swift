@@ -28,4 +28,10 @@ class LoginViewController: UIViewController {
         }
     }
 
+    @IBAction func registerAction(_ sender: UIButton) {
+        let registerView = RegisterViewController.instantiateFromNib()
+        let navigation = BaseNavigationController(rootViewController: registerView)
+        present(navigation, animated: true, completion: nil)
+    }
+
 }
