@@ -53,7 +53,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yn-qh-aFV">
-                    <rect key="frame" x="126" y="596" width="123" height="30"/>
+                    <rect key="frame" x="126" y="583" width="123" height="30"/>
                     <state key="normal" title="Forgot password?">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -64,6 +64,15 @@
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOF-Kj-gec">
+                    <rect key="frame" x="159" y="621" width="57" height="30"/>
+                    <state key="normal" title="Register">
+                        <color key="titleColor" red="0.95294117649999999" green="0.97254901959999995" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="registerAction:" destination="-1" eventType="touchUpInside" id="H0z-dK-ydQ"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.14509803921568626" green="0.29019607843137252" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -72,8 +81,10 @@
                 <constraint firstItem="ncd-tz-hZD" firstAttribute="trailing" secondItem="aJN-5D-KM6" secondAttribute="trailing" id="BMT-Y8-hIN"/>
                 <constraint firstItem="ncd-tz-hZD" firstAttribute="top" secondItem="aJN-5D-KM6" secondAttribute="bottom" constant="100" id="F6f-90-O2Y"/>
                 <constraint firstItem="eaN-io-yvq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Fvl-zl-5cH"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1yn-qh-aFV" secondAttribute="bottom" constant="41" id="LsW-dr-z6V"/>
+                <constraint firstItem="xOF-Kj-gec" firstAttribute="top" secondItem="1yn-qh-aFV" secondAttribute="bottom" constant="8" id="V58-B9-TAm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xOF-Kj-gec" secondAttribute="bottom" constant="16" id="W0d-UQ-lpW"/>
                 <constraint firstItem="eaN-io-yvq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="Wqa-Xu-7dJ"/>
+                <constraint firstItem="xOF-Kj-gec" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Y8h-VH-DDy"/>
                 <constraint firstItem="1yn-qh-aFV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eFt-XQ-08s"/>
                 <constraint firstItem="ncd-tz-hZD" firstAttribute="leading" secondItem="aJN-5D-KM6" secondAttribute="leading" id="eiE-lu-kkV"/>
                 <constraint firstItem="aJN-5D-KM6" firstAttribute="top" secondItem="eaN-io-yvq" secondAttribute="bottom" constant="16" id="fsm-Kp-hkN"/>
