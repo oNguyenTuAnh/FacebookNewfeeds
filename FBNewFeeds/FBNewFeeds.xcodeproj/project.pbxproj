@@ -30,6 +30,13 @@
 		9560D41220C64194008E544A /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9560D41120C64194008E544A /* UIImageExtension.swift */; };
 		9560D41420C641CA008E544A /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9560D41320C641CA008E544A /* UIImageViewExtension.swift */; };
 		9562B51720BD294900C8F236 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562B51620BD294900C8F236 /* Utilities.swift */; };
+		95AD674E20C68B900005CD7C /* ItemPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD674C20C68B900005CD7C /* ItemPhotoView.swift */; };
+		95AD674F20C68B900005CD7C /* ItemPhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95AD674D20C68B900005CD7C /* ItemPhotoView.xib */; };
+		95AD675620C68BB00005CD7C /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD675220C68BB00005CD7C /* StoryCollectionViewCell.swift */; };
+		95AD675720C68BB00005CD7C /* StoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95AD675320C68BB00005CD7C /* StoryCollectionViewCell.xib */; };
+		95AD675820C68BB00005CD7C /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD675420C68BB00005CD7C /* StoryView.swift */; };
+		95AD675920C68BB00005CD7C /* StoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95AD675520C68BB00005CD7C /* StoryView.xib */; };
+		95AD675B20C68C660005CD7C /* AppEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD675A20C68C660005CD7C /* AppEnum.swift */; };
 		95EA50A420BBF2F700B298AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EA50A320BBF2F700B298AA /* AppDelegate.swift */; };
 		95EA50AB20BBF2F800B298AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95EA50AA20BBF2F800B298AA /* Assets.xcassets */; };
 		95EA50AE20BBF2F800B298AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95EA50AC20BBF2F800B298AA /* LaunchScreen.storyboard */; };
@@ -66,6 +73,13 @@
 		9560D41120C64194008E544A /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		9560D41320C641CA008E544A /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		9562B51620BD294900C8F236 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		95AD674C20C68B900005CD7C /* ItemPhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemPhotoView.swift; sourceTree = "<group>"; };
+		95AD674D20C68B900005CD7C /* ItemPhotoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemPhotoView.xib; sourceTree = "<group>"; };
+		95AD675220C68BB00005CD7C /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		95AD675320C68BB00005CD7C /* StoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		95AD675420C68BB00005CD7C /* StoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
+		95AD675520C68BB00005CD7C /* StoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoryView.xib; sourceTree = "<group>"; };
+		95AD675A20C68C660005CD7C /* AppEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnum.swift; sourceTree = "<group>"; };
 		95EA50A020BBF2F700B298AA /* FBNewFeeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBNewFeeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95EA50A320BBF2F700B298AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95EA50AA20BBF2F800B298AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,6 +131,7 @@
 		9560D3D320C6368D008E544A /* Configs */ = {
 			isa = PBXGroup;
 			children = (
+				95AD675A20C68C660005CD7C /* AppEnum.swift */,
 				9560D3D420C636A9008E544A /* AppColor.swift */,
 			);
 			path = Configs;
@@ -161,6 +176,7 @@
 		9560D3EC20C63EDE008E544A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				95AD675020C68BB00005CD7C /* StoryView */,
 				9560D3ED20C63EDE008E544A /* Cells */,
 				9560D3F320C63EDE008E544A /* NewsfeedViewController.swift */,
 				9560D3F420C63EDE008E544A /* NewsfeedViewController.xib */,
@@ -171,6 +187,7 @@
 		9560D3ED20C63EDE008E544A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				95AD674B20C68B900005CD7C /* ItemPhotoView */,
 				9560D3EE20C63EDE008E544A /* FeedTableViewCell.swift */,
 				9560D3EF20C63EDE008E544A /* FeedTableViewCell.xib */,
 			);
@@ -183,6 +200,34 @@
 				9562B51620BD294900C8F236 /* Utilities.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		95AD674B20C68B900005CD7C /* ItemPhotoView */ = {
+			isa = PBXGroup;
+			children = (
+				95AD674C20C68B900005CD7C /* ItemPhotoView.swift */,
+				95AD674D20C68B900005CD7C /* ItemPhotoView.xib */,
+			);
+			path = ItemPhotoView;
+			sourceTree = "<group>";
+		};
+		95AD675020C68BB00005CD7C /* StoryView */ = {
+			isa = PBXGroup;
+			children = (
+				95AD675120C68BB00005CD7C /* Cells */,
+				95AD675420C68BB00005CD7C /* StoryView.swift */,
+				95AD675520C68BB00005CD7C /* StoryView.xib */,
+			);
+			path = StoryView;
+			sourceTree = "<group>";
+		};
+		95AD675120C68BB00005CD7C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				95AD675220C68BB00005CD7C /* StoryCollectionViewCell.swift */,
+				95AD675320C68BB00005CD7C /* StoryCollectionViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		95EA509720BBF2F700B298AA = {
@@ -341,6 +386,9 @@
 				95EA50AB20BBF2F800B298AA /* Assets.xcassets in Resources */,
 				9560D3D120C63676008E544A /* NotifyViewController.xib in Resources */,
 				9560D3FC20C63EDE008E544A /* FeedTableViewCell.xib in Resources */,
+				95AD675920C68BB00005CD7C /* StoryView.xib in Resources */,
+				95AD675720C68BB00005CD7C /* StoryCollectionViewCell.xib in Resources */,
+				95AD674F20C68B900005CD7C /* ItemPhotoView.xib in Resources */,
 				9560D40020C63EDE008E544A /* NewsfeedViewController.xib in Resources */,
 				95EF922F20BBFA8C00998D8D /* ProfileViewController.xib in Resources */,
 			);
@@ -371,6 +419,7 @@
 			files = (
 				9560D41420C641CA008E544A /* UIImageViewExtension.swift in Sources */,
 				95EA50BA20BBF9FD00B298AA /* LoginViewController.swift in Sources */,
+				95AD675B20C68C660005CD7C /* AppEnum.swift in Sources */,
 				9560D40620C63F0D008E544A /* DateExtension.swift in Sources */,
 				9560D3FF20C63EDE008E544A /* NewsfeedViewController.swift in Sources */,
 				9560D40820C63F12008E544A /* IntExtension.swift in Sources */,
@@ -379,6 +428,7 @@
 				95EF923A20BC01C700998D8D /* BaseNavigationController.swift in Sources */,
 				95EF923D20BC028B00998D8D /* MainTabBarController.swift in Sources */,
 				9560D3D520C636AA008E544A /* AppColor.swift in Sources */,
+				95AD675820C68BB00005CD7C /* StoryView.swift in Sources */,
 				9560D3D220C63676008E544A /* NotifyViewController.swift in Sources */,
 				95EF924120BC089000998D8D /* UIColorExtension.swift in Sources */,
 				9560D3FB20C63EDE008E544A /* FeedTableViewCell.swift in Sources */,
@@ -389,7 +439,9 @@
 				9562B51720BD294900C8F236 /* Utilities.swift in Sources */,
 				9560D3E620C63EA2008E544A /* Feeds.swift in Sources */,
 				9560D40A20C63F23008E544A /* UIViewExtension.swift in Sources */,
+				95AD674E20C68B900005CD7C /* ItemPhotoView.swift in Sources */,
 				9560D41020C64124008E544A /* UIViewControllerExtension.swift in Sources */,
+				95AD675620C68BB00005CD7C /* StoryCollectionViewCell.swift in Sources */,
 				95EA50A420BBF2F700B298AA /* AppDelegate.swift in Sources */,
 				9560D3EB20C63EAA008E544A /* NewsFeedViewModel.swift in Sources */,
 				9560D3E120C63E75008E544A /* APIServices.swift in Sources */,

@@ -42,7 +42,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IHr-Po-XIc">
-                                <rect key="frame" x="10" y="58" width="300" height="109.5"/>
+                                <rect key="frame" x="10" y="58" width="300" height="30.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -54,12 +54,20 @@
                                     <constraint firstAttribute="height" constant="30" id="dQc-fX-dkj"/>
                                 </constraints>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="pgr-Tu-XyA">
+                                <rect key="frame" x="10" y="92.5" width="300" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="Ln5-iO-CNL"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="X67-1I-eb5" secondAttribute="trailing" constant="10" id="3Ib-ab-bXL"/>
                             <constraint firstItem="NDR-Nf-Pr3" firstAttribute="leading" secondItem="pga-hb-lGG" secondAttribute="leading" constant="10" id="5wX-cs-zbX"/>
-                            <constraint firstAttribute="bottom" secondItem="IHr-Po-XIc" secondAttribute="bottom" constant="8" id="EC0-W6-aoY"/>
+                            <constraint firstAttribute="bottom" secondItem="pgr-Tu-XyA" secondAttribute="bottom" constant="4" id="Aly-Pf-Cpu"/>
+                            <constraint firstItem="pgr-Tu-XyA" firstAttribute="top" secondItem="IHr-Po-XIc" secondAttribute="bottom" constant="4" id="Fmk-tY-ojD"/>
+                            <constraint firstItem="pgr-Tu-XyA" firstAttribute="trailing" secondItem="IHr-Po-XIc" secondAttribute="trailing" id="Jqg-Rg-UAa"/>
                             <constraint firstItem="IHr-Po-XIc" firstAttribute="top" secondItem="NDR-Nf-Pr3" secondAttribute="bottom" constant="8" id="NpY-Lf-BsV"/>
                             <constraint firstAttribute="trailing" secondItem="IHr-Po-XIc" secondAttribute="trailing" constant="10" id="O9H-lR-mKd"/>
                             <constraint firstItem="X67-1I-eb5" firstAttribute="leading" secondItem="Kma-8p-STl" secondAttribute="trailing" constant="8" id="PXv-eR-sgC"/>
@@ -69,6 +77,7 @@
                             <constraint firstItem="NDR-Nf-Pr3" firstAttribute="top" secondItem="pga-hb-lGG" secondAttribute="top" constant="10" id="YzK-GG-1Is"/>
                             <constraint firstItem="Kma-8p-STl" firstAttribute="top" secondItem="NDR-Nf-Pr3" secondAttribute="top" id="cXa-iQ-aRq"/>
                             <constraint firstItem="tPf-rf-XLM" firstAttribute="trailing" secondItem="Kma-8p-STl" secondAttribute="trailing" id="h6B-Gu-Xio"/>
+                            <constraint firstItem="pgr-Tu-XyA" firstAttribute="leading" secondItem="IHr-Po-XIc" secondAttribute="leading" id="kVS-hr-lnd"/>
                             <constraint firstItem="tPf-rf-XLM" firstAttribute="top" secondItem="Kma-8p-STl" secondAttribute="bottom" constant="5" id="nKQ-Uc-rD9"/>
                             <constraint firstItem="X67-1I-eb5" firstAttribute="top" secondItem="pga-hb-lGG" secondAttribute="top" constant="10" id="w28-7P-x1u"/>
                         </constraints>
@@ -282,9 +291,11 @@
                 <outlet property="content" destination="IHr-Po-XIc" id="a5l-hN-wOa"/>
                 <outlet property="createAt" destination="tPf-rf-XLM" id="3U8-bJ-tWQ"/>
                 <outlet property="fullName" destination="Kma-8p-STl" id="anG-Cp-3vz"/>
+                <outlet property="heightPhotoStackViewLayout" destination="Ln5-iO-CNL" id="iC5-bm-URI"/>
                 <outlet property="numberComment" destination="mmh-m0-v1Z" id="dgJ-2h-b9B"/>
                 <outlet property="numberLike" destination="M2B-yL-P7h" id="yJD-0y-4b8"/>
                 <outlet property="numberShare" destination="wug-1G-4c9" id="hB4-yv-2db"/>
+                <outlet property="photoStackView" destination="pgr-Tu-XyA" id="4W1-8F-j4Z"/>
             </connections>
             <point key="canvasLocation" x="25" y="155.5"/>
         </tableViewCell>

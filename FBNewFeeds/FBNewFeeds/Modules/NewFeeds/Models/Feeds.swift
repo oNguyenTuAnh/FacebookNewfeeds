@@ -9,7 +9,7 @@
 import Foundation
 
 struct Feeds: Codable {
-    
+
     let fullName: String?
     let avatarUrl: String?
     let createAt: String?
@@ -19,7 +19,7 @@ struct Feeds: Codable {
     let commentCount: Int?
     let sharingCount: Int?
     let feedImages: [String]?
-    
+
     enum CodingKeys: String, CodingKey {
         case fullName
         case avatarUrl
@@ -31,7 +31,7 @@ struct Feeds: Codable {
         case sharingCount
         case feedImages
     }
-    
+
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         fullName = try values.decodeIfPresent(String.self, forKey: .fullName)
@@ -44,5 +44,5 @@ struct Feeds: Codable {
         sharingCount = try values.decodeIfPresent(Int.self, forKey: .sharingCount)
         feedImages = try values.decodeIfPresent([String].self, forKey: .feedImages)
     }
-    
+
 }

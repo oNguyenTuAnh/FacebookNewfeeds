@@ -17,8 +17,20 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var numberShare: UILabel!
     @IBOutlet weak var content: UITextView!
     @IBOutlet weak var createAt: UILabel!
+    @IBOutlet weak var photoStackView: UIStackView!
+    @IBOutlet weak var heightPhotoStackViewLayout: NSLayoutConstraint!
 
     var actionClickProfile: (() -> Void)?
+    var layoutType = PhotoLayoutType.horizontal {
+        didSet {
+            if layoutType == .horizontal {
+                photoStackView.axis = .horizontal
+            } else if layoutType == .vertical {
+                photoStackView.axis = .vertical
+            }
+            subStackView.axis = layoutType.getStackViewAxisLayout()
+        }
+    }
 
     lazy var subStackView: UIStackView = {
         let stackView = UIStackView(frame: .zero)
@@ -65,6 +77,72 @@ class FeedTableViewCell: UITableViewCell {
                  createAt.text = date.timestampString
             }
         }
+        photoStackView.removeAllSubviews()
+        subStackView.removeAllSubviews()
+        if let imgFeed = feed?.feedImages, imgFeed.count > 0 {
+            heightPhotoStackViewLayout.constant = 300.0
+            bindingPhoto(imgFeed)
+        } else {
+            heightPhotoStackViewLayout.constant = 0.0
+        }
+    }
+
+    private func bindingPhoto(_ photos: [String]) {
+        updateLayoutPhoto(photos)
+
+        if photos.count <= 2 {
+            for photo in photos {
+                photoStackView.addArrangedSubview(creatImageView(photo))
+            }
+        } else if photos.count <= 4 {
+            for (index, photo) in photos.enumerated() {
+                if index == 0 {
+                    photoStackView.addArrangedSubview(creatImageView(photo))
+                    photoStackView.addArrangedSubview(subStackView)
+                } else {
+                    subStackView.addArrangedSubview(creatImageView(photo))
+                }
+            }
+        } else {
+            let number: Int = photos.count - 4
+            for (index, photo) in photos[0..<4].enumerated() {
+                if index == 0 {
+                    photoStackView.addArrangedSubview(creatImageView(photo))
+                    photoStackView.addArrangedSubview(subStackView)
+                } else if index == 3 {
+                    subStackView.addArrangedSubview(creatImageView(photo, numberHiden: number))
+                } else {
+                    subStackView.addArrangedSubview(creatImageView(photo))
+                }
+            }
+        }
+
+        photoStackView.setNeedsLayout()
+    }
+
+    private func creatImageView(_ photo: String, numberHiden: Int = 0) -> UIView {
+        guard let photoView = ItemPhotoView.initWithDefaultNib() else {
+            return UIView()
+        }
+        if numberHiden != 0 {
+            photoView.bindingData(photo, isMore: true, numberHiden: numberHiden)
+        } else {
+            photoView.bindingData(photo)
+        }
+        photoView.actionTapPhotoClosure = {
+            print(photo)
+        }
+        photoView.layoutIfNeeded()
+        return photoView
+    }
+
+    private func updateLayoutPhoto(_ photos: [String]) {
+        UIImage.downloadedFrom(link: photos[0], completion: { [weak self] (image) in
+            guard let strongSelf = self else {
+                return
+            }
+            strongSelf.layoutType = image.size.height > image.size.width ? .horizontal : .vertical
+        })
     }
 
     @objc func showProfile(_ gesture: UITapGestureRecognizer) {

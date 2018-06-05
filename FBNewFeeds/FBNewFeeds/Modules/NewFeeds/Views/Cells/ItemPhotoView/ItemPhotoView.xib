@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ItemPhotoView" customModule="FBNewFeeds" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="235" height="203"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zrg-Ae-xLZ">
+                    <rect key="frame" x="0.0" y="0.0" width="235" height="203"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceG-Fe-wkm">
+                    <rect key="frame" x="0.0" y="0.0" width="235" height="203"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                    <state key="normal" title="+3">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="actionTapPhoto:" destination="iN0-l3-epB" eventType="touchUpInside" id="mH7-46-bcV"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ceG-Fe-wkm" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="3xh-OR-d94"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="zrg-Ae-xLZ" secondAttribute="bottom" id="R9L-Ff-65X"/>
+                <constraint firstItem="zrg-Ae-xLZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="aTH-9T-QSu"/>
+                <constraint firstItem="ceG-Fe-wkm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dQi-nW-aB2"/>
+                <constraint firstItem="zrg-Ae-xLZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jTn-8O-SsG"/>
+                <constraint firstAttribute="trailing" secondItem="zrg-Ae-xLZ" secondAttribute="trailing" id="mGn-nc-tLD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ceG-Fe-wkm" secondAttribute="bottom" id="nbP-Tr-fch"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ceG-Fe-wkm" secondAttribute="trailing" id="uVd-nc-HHr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="numberButton" destination="ceG-Fe-wkm" id="acQ-fu-rMP"/>
+                <outlet property="photoImageView" destination="zrg-Ae-xLZ" id="IMD-8u-bDK"/>
+            </connections>
+            <point key="canvasLocation" x="-45.5" y="192.5"/>
+        </view>
+    </objects>
+</document>
