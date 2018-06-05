@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9560D3D120C63676008E544A /* NotifyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9560D3CF20C63676008E544A /* NotifyViewController.xib */; };
+		9560D3D220C63676008E544A /* NotifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9560D3D020C63676008E544A /* NotifyViewController.swift */; };
+		9560D3D520C636AA008E544A /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9560D3D420C636A9008E544A /* AppColor.swift */; };
 		9562B51720BD294900C8F236 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562B51620BD294900C8F236 /* Utilities.swift */; };
 		95EA50A420BBF2F700B298AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EA50A320BBF2F700B298AA /* AppDelegate.swift */; };
 		95EA50AB20BBF2F800B298AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95EA50AA20BBF2F800B298AA /* Assets.xcassets */; };
@@ -15,8 +18,8 @@
 		95EA50BB20BBF9FD00B298AA /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95EA50B920BBF9FD00B298AA /* LoginViewController.xib */; };
 		95EF922E20BBFA8C00998D8D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EF922C20BBFA8C00998D8D /* ProfileViewController.swift */; };
 		95EF922F20BBFA8C00998D8D /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95EF922D20BBFA8C00998D8D /* ProfileViewController.xib */; };
-		95EF923220BBFAA800998D8D /* NewfeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EF923020BBFAA800998D8D /* NewfeedsViewController.swift */; };
-		95EF923320BBFAA800998D8D /* NewfeedsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95EF923120BBFAA800998D8D /* NewfeedsViewController.xib */; };
+		95EF923220BBFAA800998D8D /* NewseedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EF923020BBFAA800998D8D /* NewseedViewController.swift */; };
+		95EF923320BBFAA800998D8D /* NewsfeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95EF923120BBFAA800998D8D /* NewsfeedViewController.xib */; };
 		95EF923720BBFB2200998D8D /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EF923620BBFB2200998D8D /* UIViewControllerExtension.swift */; };
 		95EF923A20BC01C700998D8D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EF923920BC01C700998D8D /* BaseNavigationController.swift */; };
 		95EF923D20BC028B00998D8D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EF923C20BC028B00998D8D /* MainTabBarController.swift */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9560D3CF20C63676008E544A /* NotifyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotifyViewController.xib; sourceTree = "<group>"; };
+		9560D3D020C63676008E544A /* NotifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyViewController.swift; sourceTree = "<group>"; };
+		9560D3D420C636A9008E544A /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		9562B51620BD294900C8F236 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		95EA50A020BBF2F700B298AA /* FBNewFeeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBNewFeeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95EA50A320BBF2F700B298AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,8 +41,8 @@
 		95EA50B920BBF9FD00B298AA /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		95EF922C20BBFA8C00998D8D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		95EF922D20BBFA8C00998D8D /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		95EF923020BBFAA800998D8D /* NewfeedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewfeedsViewController.swift; sourceTree = "<group>"; };
-		95EF923120BBFAA800998D8D /* NewfeedsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewfeedsViewController.xib; sourceTree = "<group>"; };
+		95EF923020BBFAA800998D8D /* NewseedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewseedViewController.swift; sourceTree = "<group>"; };
+		95EF923120BBFAA800998D8D /* NewsfeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsfeedViewController.xib; sourceTree = "<group>"; };
 		95EF923620BBFB2200998D8D /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		95EF923920BC01C700998D8D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		95EF923C20BC028B00998D8D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -55,6 +61,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9560D3CD20C63561008E544A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9560D3CE20C6365E008E544A /* Notify */,
+				95EA50B720BBF9D200B298AA /* NewFeeds */,
+				95EA50B620BBF9BB00B298AA /* Profile */,
+				95EA50B520BBF9B100B298AA /* Login */,
+				95EF923B20BC025800998D8D /* TabBar */,
+				95EF923820BC019700998D8D /* BaseController */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9560D3CE20C6365E008E544A /* Notify */ = {
+			isa = PBXGroup;
+			children = (
+				9560D3D020C63676008E544A /* NotifyViewController.swift */,
+				9560D3CF20C63676008E544A /* NotifyViewController.xib */,
+			);
+			path = Notify;
+			sourceTree = "<group>";
+		};
+		9560D3D320C6368D008E544A /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				9560D3D420C636A9008E544A /* AppColor.swift */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
 		9562B51520BD292500C8F236 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,13 +118,10 @@
 		95EA50A220BBF2F700B298AA /* FBNewFeeds */ = {
 			isa = PBXGroup;
 			children = (
+				9560D3D320C6368D008E544A /* Configs */,
+				9560D3CD20C63561008E544A /* Modules */,
 				9562B51520BD292500C8F236 /* Utilities */,
-				95EF923B20BC025800998D8D /* TabBar */,
-				95EF923820BC019700998D8D /* BaseController */,
 				95EF923520BBFAED00998D8D /* Extensions */,
-				95EA50B720BBF9D200B298AA /* NewFeeds */,
-				95EA50B620BBF9BB00B298AA /* Profile */,
-				95EA50B520BBF9B100B298AA /* Login */,
 				95EA50A320BBF2F700B298AA /* AppDelegate.swift */,
 				95EA50AC20BBF2F800B298AA /* LaunchScreen.storyboard */,
 				95EA50AF20BBF2F800B298AA /* Info.plist */,
@@ -118,8 +151,8 @@
 		95EA50B720BBF9D200B298AA /* NewFeeds */ = {
 			isa = PBXGroup;
 			children = (
-				95EF923020BBFAA800998D8D /* NewfeedsViewController.swift */,
-				95EF923120BBFAA800998D8D /* NewfeedsViewController.xib */,
+				95EF923020BBFAA800998D8D /* NewseedViewController.swift */,
+				95EF923120BBFAA800998D8D /* NewsfeedViewController.xib */,
 			);
 			path = NewFeeds;
 			sourceTree = "<group>";
@@ -212,7 +245,8 @@
 				95EA50BB20BBF9FD00B298AA /* LoginViewController.xib in Resources */,
 				95EA50AE20BBF2F800B298AA /* LaunchScreen.storyboard in Resources */,
 				95EA50AB20BBF2F800B298AA /* Assets.xcassets in Resources */,
-				95EF923320BBFAA800998D8D /* NewfeedsViewController.xib in Resources */,
+				9560D3D120C63676008E544A /* NotifyViewController.xib in Resources */,
+				95EF923320BBFAA800998D8D /* NewsfeedViewController.xib in Resources */,
 				95EF922F20BBFA8C00998D8D /* ProfileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,8 +279,10 @@
 				95EF923A20BC01C700998D8D /* BaseNavigationController.swift in Sources */,
 				95EF923F20BC05B500998D8D /* UIImageExtension.swift in Sources */,
 				95EF923D20BC028B00998D8D /* MainTabBarController.swift in Sources */,
+				9560D3D520C636AA008E544A /* AppColor.swift in Sources */,
+				9560D3D220C63676008E544A /* NotifyViewController.swift in Sources */,
 				95EF924120BC089000998D8D /* UIColorExtension.swift in Sources */,
-				95EF923220BBFAA800998D8D /* NewfeedsViewController.swift in Sources */,
+				95EF923220BBFAA800998D8D /* NewseedViewController.swift in Sources */,
 				95EF923720BBFB2200998D8D /* UIViewControllerExtension.swift in Sources */,
 				9562B51720BD294900C8F236 /* Utilities.swift in Sources */,
 				95EA50A420BBF2F700B298AA /* AppDelegate.swift in Sources */,
