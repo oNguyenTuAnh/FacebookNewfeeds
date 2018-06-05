@@ -28,4 +28,23 @@ extension UIViewController {
         view.endEditing(true)
     }
 
+    func showActivityIndicatory(onView: UIView) -> UIView {
+        let spinnerView = UIView.init(frame: onView.bounds)
+        spinnerView.backgroundColor = AppColor.backgroupActivityColor()
+        let indicatorView = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
+        indicatorView.startAnimating()
+        indicatorView.center = spinnerView.center
+        DispatchQueue.main.async {
+            spinnerView.addSubview(indicatorView)
+            onView.addSubview(spinnerView)
+        }
+        return spinnerView
+    }
+
+    func removeActivityIndicatory(indicatorView: UIView) {
+        DispatchQueue.main.async {
+            indicatorView.removeFromSuperview()
+        }
+    }
+
 }
