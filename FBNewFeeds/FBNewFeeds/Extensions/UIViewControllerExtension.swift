@@ -30,7 +30,7 @@ extension UIViewController {
 
     func showActivityIndicatory(onView: UIView) -> UIView {
         let spinnerView = UIView.init(frame: onView.bounds)
-        spinnerView.backgroundColor = AppColor.backgroupActivityColor()
+        spinnerView.backgroundColor = AppColor.backgroupActivityColor
         let indicatorView = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
         indicatorView.startAnimating()
         indicatorView.center = spinnerView.center

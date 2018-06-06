@@ -37,13 +37,19 @@
 		95AD675820C68BB00005CD7C /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD675420C68BB00005CD7C /* StoryView.swift */; };
 		95AD675920C68BB00005CD7C /* StoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95AD675520C68BB00005CD7C /* StoryView.xib */; };
 		95AD675B20C68C660005CD7C /* AppEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD675A20C68C660005CD7C /* AppEnum.swift */; };
+		95DAB67220C768500042613E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DAB67020C768500042613E /* ProfileViewController.swift */; };
+		95DAB67320C768500042613E /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95DAB67120C768500042613E /* ProfileViewController.xib */; };
+		95DAB67820C768720042613E /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DAB67620C768720042613E /* ProfileHeaderView.swift */; };
+		95DAB67920C768720042613E /* ProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95DAB67720C768720042613E /* ProfileHeaderView.xib */; };
+		95DAB67D20C7806C0042613E /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DAB67C20C7806C0042613E /* ProfileViewModel.swift */; };
+		95DAB67F20C780DB0042613E /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DAB67E20C780DB0042613E /* Profile.swift */; };
+		95DAB68120C780EA0042613E /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DAB68020C780EA0042613E /* About.swift */; };
+		95DAB68320C787670042613E /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DAB68220C787670042613E /* ProfileModel.swift */; };
 		95EA50A420BBF2F700B298AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EA50A320BBF2F700B298AA /* AppDelegate.swift */; };
 		95EA50AB20BBF2F800B298AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95EA50AA20BBF2F800B298AA /* Assets.xcassets */; };
 		95EA50AE20BBF2F800B298AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95EA50AC20BBF2F800B298AA /* LaunchScreen.storyboard */; };
 		95EA50BA20BBF9FD00B298AA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EA50B820BBF9FD00B298AA /* LoginViewController.swift */; };
 		95EA50BB20BBF9FD00B298AA /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95EA50B920BBF9FD00B298AA /* LoginViewController.xib */; };
-		95EF922E20BBFA8C00998D8D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EF922C20BBFA8C00998D8D /* ProfileViewController.swift */; };
-		95EF922F20BBFA8C00998D8D /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95EF922D20BBFA8C00998D8D /* ProfileViewController.xib */; };
 		95EF923A20BC01C700998D8D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EF923920BC01C700998D8D /* BaseNavigationController.swift */; };
 		95EF923D20BC028B00998D8D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EF923C20BC028B00998D8D /* MainTabBarController.swift */; };
 		95EF924120BC089000998D8D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EF924020BC089000998D8D /* UIColorExtension.swift */; };
@@ -80,6 +86,14 @@
 		95AD675420C68BB00005CD7C /* StoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
 		95AD675520C68BB00005CD7C /* StoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoryView.xib; sourceTree = "<group>"; };
 		95AD675A20C68C660005CD7C /* AppEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnum.swift; sourceTree = "<group>"; };
+		95DAB67020C768500042613E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		95DAB67120C768500042613E /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		95DAB67620C768720042613E /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		95DAB67720C768720042613E /* ProfileHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileHeaderView.xib; sourceTree = "<group>"; };
+		95DAB67C20C7806C0042613E /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		95DAB67E20C780DB0042613E /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		95DAB68020C780EA0042613E /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		95DAB68220C787670042613E /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		95EA50A020BBF2F700B298AA /* FBNewFeeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBNewFeeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95EA50A320BBF2F700B298AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95EA50AA20BBF2F800B298AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,8 +101,6 @@
 		95EA50AF20BBF2F800B298AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95EA50B820BBF9FD00B298AA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		95EA50B920BBF9FD00B298AA /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		95EF922C20BBFA8C00998D8D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		95EF922D20BBFA8C00998D8D /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		95EF923920BC01C700998D8D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		95EF923C20BC028B00998D8D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		95EF924020BC089000998D8D /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -230,6 +242,43 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		95DAB67420C768720042613E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				95DAB67520C768720042613E /* ProfileHeader */,
+				95DAB67020C768500042613E /* ProfileViewController.swift */,
+				95DAB67120C768500042613E /* ProfileViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		95DAB67520C768720042613E /* ProfileHeader */ = {
+			isa = PBXGroup;
+			children = (
+				95DAB67620C768720042613E /* ProfileHeaderView.swift */,
+				95DAB67720C768720042613E /* ProfileHeaderView.xib */,
+			);
+			path = ProfileHeader;
+			sourceTree = "<group>";
+		};
+		95DAB67A20C7802C0042613E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				95DAB67E20C780DB0042613E /* Profile.swift */,
+				95DAB68020C780EA0042613E /* About.swift */,
+				95DAB68220C787670042613E /* ProfileModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		95DAB67B20C7803B0042613E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				95DAB67C20C7806C0042613E /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		95EA509720BBF2F700B298AA = {
 			isa = PBXGroup;
 			children = (
@@ -274,8 +323,9 @@
 		95EA50B620BBF9BB00B298AA /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				95EF922C20BBFA8C00998D8D /* ProfileViewController.swift */,
-				95EF922D20BBFA8C00998D8D /* ProfileViewController.xib */,
+				95DAB67B20C7803B0042613E /* ViewModel */,
+				95DAB67A20C7802C0042613E /* Models */,
+				95DAB67420C768720042613E /* Views */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -385,12 +435,13 @@
 				9560D3DA20C639D5008E544A /* RegisterViewController.xib in Resources */,
 				95EA50AB20BBF2F800B298AA /* Assets.xcassets in Resources */,
 				9560D3D120C63676008E544A /* NotifyViewController.xib in Resources */,
+				95DAB67320C768500042613E /* ProfileViewController.xib in Resources */,
 				9560D3FC20C63EDE008E544A /* FeedTableViewCell.xib in Resources */,
+				95DAB67920C768720042613E /* ProfileHeaderView.xib in Resources */,
 				95AD675920C68BB00005CD7C /* StoryView.xib in Resources */,
 				95AD675720C68BB00005CD7C /* StoryCollectionViewCell.xib in Resources */,
 				95AD674F20C68B900005CD7C /* ItemPhotoView.xib in Resources */,
 				9560D40020C63EDE008E544A /* NewsfeedViewController.xib in Resources */,
-				95EF922F20BBFA8C00998D8D /* ProfileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,14 +474,18 @@
 				9560D40620C63F0D008E544A /* DateExtension.swift in Sources */,
 				9560D3FF20C63EDE008E544A /* NewsfeedViewController.swift in Sources */,
 				9560D40820C63F12008E544A /* IntExtension.swift in Sources */,
-				95EF922E20BBFA8C00998D8D /* ProfileViewController.swift in Sources */,
 				9560D40E20C63FA3008E544A /* BaseViewController.swift in Sources */,
+				95DAB67820C768720042613E /* ProfileHeaderView.swift in Sources */,
 				95EF923A20BC01C700998D8D /* BaseNavigationController.swift in Sources */,
+				95DAB68320C787670042613E /* ProfileModel.swift in Sources */,
 				95EF923D20BC028B00998D8D /* MainTabBarController.swift in Sources */,
 				9560D3D520C636AA008E544A /* AppColor.swift in Sources */,
 				95AD675820C68BB00005CD7C /* StoryView.swift in Sources */,
+				95DAB67D20C7806C0042613E /* ProfileViewModel.swift in Sources */,
+				95DAB68120C780EA0042613E /* About.swift in Sources */,
 				9560D3D220C63676008E544A /* NotifyViewController.swift in Sources */,
 				95EF924120BC089000998D8D /* UIColorExtension.swift in Sources */,
+				95DAB67220C768500042613E /* ProfileViewController.swift in Sources */,
 				9560D3FB20C63EDE008E544A /* FeedTableViewCell.swift in Sources */,
 				9560D3E820C63EA2008E544A /* Stories.swift in Sources */,
 				9560D3E020C63E75008E544A /* APIRequestProvider.swift in Sources */,
@@ -440,6 +495,7 @@
 				9560D3E620C63EA2008E544A /* Feeds.swift in Sources */,
 				9560D40A20C63F23008E544A /* UIViewExtension.swift in Sources */,
 				95AD674E20C68B900005CD7C /* ItemPhotoView.swift in Sources */,
+				95DAB67F20C780DB0042613E /* Profile.swift in Sources */,
 				9560D41020C64124008E544A /* UIViewControllerExtension.swift in Sources */,
 				95AD675620C68BB00005CD7C /* StoryCollectionViewCell.swift in Sources */,
 				95EA50A420BBF2F700B298AA /* AppDelegate.swift in Sources */,

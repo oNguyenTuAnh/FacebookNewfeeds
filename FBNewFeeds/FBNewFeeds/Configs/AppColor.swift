@@ -10,12 +10,8 @@ import UIKit
 
 class AppColor {
 
-    static func blueColor() -> UIColor {
-        return UIColor.fromHex("254A85")
-    }
+    static let blueColor = UIColor.fromHex("254A85")
 
-    static func backgroupActivityColor() -> UIColor {
-        return UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
-    }
+    static let backgroupActivityColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
 
 }

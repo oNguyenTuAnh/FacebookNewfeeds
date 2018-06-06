@@ -20,4 +20,11 @@ class APIRequestProvider {
         return URLRequest(url: url)
     }
 
+    func profileRequest() -> URLRequest? {
+        guard let url = URL(string: "https://www.mocky.io/v2/5b175ed830000072008733c3") else {
+            return nil
+        }
+        return URLRequest(url: url)
+    }
+
 }
