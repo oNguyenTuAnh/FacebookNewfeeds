@@ -1,18 +1,18 @@
 //
-//  NewsFeedViewModel.swift
+//  ProfileViewModel.swift
 //  FBNewFeeds
 //
-//  Created by nguyen.tu.anh on 5/30/18.
+//  Created by nguyen.tu.anh on 6/6/18.
 //  Copyright © 2018 nguyen.tu.anh. All rights reserved.
 //
 
 import UIKit
 
-class NewsFeedViewModel: NSObject {
+class ProfileViewModel: NSObject {
 
     private var backgroundQueue = OperationQueue()
     private weak var mainQueue = OperationQueue.main
-    var newsFeeds: Newsfeed?
+    var profileModel: ProfileModel?
 
     override init() {
         backgroundQueue.maxConcurrentOperationCount = 1
@@ -20,7 +20,7 @@ class NewsFeedViewModel: NSObject {
 
     func getData(completion: @escaping (_ error: String?) -> Void) {
         backgroundQueue.addOperation {
-            guard let request = APIRequestProvider.shareInstance.newsFeedRequest() else {
+            guard let request = APIRequestProvider.shareInstance.profileRequest() else {
                 return
             }
             APIServices.shareInstance.startRequest(request: request) { [weak self] (result) in
@@ -31,8 +31,8 @@ class NewsFeedViewModel: NSObject {
                 case .success(let data):
                     let jsonDecoder = JSONDecoder()
                     do {
-                        let newsFeed = try jsonDecoder.decode(Newsfeed.self, from: data)
-                        strongSelf.setDataNewsfeed(newsFeed)
+                        let profile = try jsonDecoder.decode(ProfileModel.self, from: data)
+                        strongSelf.setDataProdile(profile)
                         strongSelf.mainQueue?.addOperation {
                             completion(nil)
                         }
@@ -50,23 +50,20 @@ class NewsFeedViewModel: NSObject {
         }
     }
 
-    func setDataNewsfeed(_ data: Newsfeed) {
-        newsFeeds = data
+    func setDataProdile(_ data: ProfileModel) {
+        profileModel = data
     }
 
     func getNumberRowNewsFeed() -> Int {
-        return newsFeeds?.feeds?.count ?? 0
+        return profileModel?.feeds?.count ?? 0
     }
 
     func getNewsFeedAtIndex(_ index: Int) -> Feeds? {
-        return newsFeeds?.feeds?[index]
+        return profileModel?.feeds?[index]
     }
 
-    func getStoryData() -> [Stories] {
-        if let stories = newsFeeds?.stories {
-            return stories
-        }
-        return []
+    func getProfile() -> Profile? {
+        return profileModel?.profile
     }
 
 }

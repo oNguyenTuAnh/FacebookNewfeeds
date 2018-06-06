@@ -23,3 +23,28 @@ enum PhotoLayoutType {
         }
     }
 }
+
+enum AboutType {
+
+    case work
+    case live
+    case from
+    case stutied
+    case unknown
+
+    static func typeFromSearver(_ type: String) -> AboutType {
+        switch type {
+        case "work":
+            return .work
+        case "live":
+            return .live
+        case "from":
+            return .from
+        case "stutied":
+            return .stutied
+        default :
+            return .unknown
+        }
+    }
+
+}

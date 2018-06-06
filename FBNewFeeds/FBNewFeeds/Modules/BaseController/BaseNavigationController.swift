@@ -20,7 +20,7 @@ class BaseNavigationController: UINavigationController {
         navigationBar.isOpaque = true
         navigationBar.isTranslucent = false
         navigationBar.tintColor = .white
-        navigationBar.barTintColor = AppColor.blueColor()
+        navigationBar.barTintColor = AppColor.blueColor
     }
 
 }

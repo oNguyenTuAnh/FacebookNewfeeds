@@ -134,7 +134,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QTF-Bh-kq3">
                                         <rect key="frame" x="33" y="9" width="40" height="15"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-like" translatesAutoresizingMaskIntoConstraints="NO" id="yIS-ze-5V4">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-like" translatesAutoresizingMaskIntoConstraints="NO" id="yIS-ze-5V4">
                                                 <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="15" id="9SP-cd-0KM"/>
@@ -302,7 +302,7 @@
     </objects>
     <resources>
         <image name="ic-comment" width="24" height="24"/>
-        <image name="ic-like" width="24" height="24"/>
+        <image name="ic-like" width="36" height="38"/>
         <image name="ic-share" width="24" height="22"/>
     </resources>
 </document>
