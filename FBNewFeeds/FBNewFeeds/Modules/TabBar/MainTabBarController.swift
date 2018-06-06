@@ -35,15 +35,15 @@ class MainTabBarController: UITabBarController {
             selectedImage: Constants.imgNewsfeed?.imageWithColor(color: AppColor.blueColor))
         listViewController.append(newsfeedViewController)
 
-        let notifyViewController = NotifyViewController.instantiateFromNib()
-        notifyViewController.tabBarItem = UITabBarItem(title: "", image: Constants.imgNotify,
-            selectedImage: Constants.imgNotify?.imageWithColor(color: AppColor.blueColor))
-        listViewController.append(notifyViewController)
-
         let friendViewController = NotifyViewController.instantiateFromNib()
         friendViewController.tabBarItem = UITabBarItem(title: "", image: Constants.imgFriend,
             selectedImage: Constants.imgFriend?.imageWithColor(color: AppColor.blueColor))
         listViewController.append(friendViewController)
+
+        let notifyViewController = NotifyViewController.instantiateFromNib()
+        notifyViewController.tabBarItem = UITabBarItem(title: "", image: Constants.imgNotify,
+            selectedImage: Constants.imgNotify?.imageWithColor(color: AppColor.blueColor))
+        listViewController.append(notifyViewController)
 
         let menuViewController = NotifyViewController.instantiateFromNib()
         menuViewController.tabBarItem = UITabBarItem(title: "", image: Constants.imgMenu,

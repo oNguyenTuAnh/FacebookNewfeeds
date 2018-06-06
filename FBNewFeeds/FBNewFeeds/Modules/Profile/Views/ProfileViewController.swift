@@ -33,7 +33,6 @@ class ProfileViewController: BaseViewController {
         if let headerTable = aboutHeader {
             let tableViewHeader = UIView(frame: CGRect(x: 0, y: 0, width: headerTable.bounds.width,
                 height: headerTable.bounds.height))
-            headerTable.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
             tableViewHeader.addSubview(headerTable)
             profileTableView.tableHeaderView = tableViewHeader
         }
