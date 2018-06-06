@@ -142,7 +142,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Like" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wve-15-X6W">
-                                                <rect key="frame" x="20" y="1.5" width="20" height="12"/>
+                                                <rect key="frame" x="20" y="3" width="20" height="12"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <color key="textColor" red="0.56322708769999996" green="0.57254901960000004" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -153,8 +153,8 @@
                                             <constraint firstAttribute="trailing" secondItem="wve-15-X6W" secondAttribute="trailing" id="AVF-Z1-OWa"/>
                                             <constraint firstItem="yIS-ze-5V4" firstAttribute="top" secondItem="QTF-Bh-kq3" secondAttribute="top" id="C1c-ip-5wm"/>
                                             <constraint firstItem="yIS-ze-5V4" firstAttribute="leading" secondItem="QTF-Bh-kq3" secondAttribute="leading" id="FwY-aV-6FS"/>
+                                            <constraint firstItem="wve-15-X6W" firstAttribute="bottom" secondItem="yIS-ze-5V4" secondAttribute="bottom" id="GP7-oZ-PPM"/>
                                             <constraint firstItem="wve-15-X6W" firstAttribute="leading" secondItem="yIS-ze-5V4" secondAttribute="trailing" constant="5" id="Z9P-OG-uxT"/>
-                                            <constraint firstItem="wve-15-X6W" firstAttribute="centerY" secondItem="yIS-ze-5V4" secondAttribute="centerY" id="Zks-j9-8yc"/>
                                             <constraint firstAttribute="bottom" secondItem="yIS-ze-5V4" secondAttribute="bottom" id="sjr-kJ-LuH"/>
                                         </constraints>
                                     </view>
@@ -302,7 +302,7 @@
     </objects>
     <resources>
         <image name="ic-comment" width="24" height="24"/>
-        <image name="ic-like" width="36" height="38"/>
-        <image name="ic-share" width="24" height="22"/>
+        <image name="ic-like" width="24" height="25"/>
+        <image name="ic-share" width="24" height="19"/>
     </resources>
 </document>
