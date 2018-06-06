@@ -29,7 +29,7 @@ enum AboutType {
     case work
     case live
     case from
-    case stutied
+    case studied
     case unknown
 
     static func typeFromSearver(_ type: String) -> AboutType {
@@ -40,11 +40,25 @@ enum AboutType {
             return .live
         case "from":
             return .from
-        case "stutied":
-            return .stutied
+        case "studied":
+            return .studied
         default :
             return .unknown
         }
     }
 
+    func getCaptionAndIcon() -> (caption: String?, icon: UIImage?)? {
+        switch self {
+        case .work:
+            return ("Work at", UIImage(named: "ic-work"))
+        case .live:
+            return ("Lives in", UIImage(named: "ic-live"))
+        case .from:
+            return ("From", UIImage(named: "ic-from"))
+        case .studied:
+            return ("Studied at", UIImage(named: "ic-studied"))
+        default:
+            return nil
+        }
+    }
 }
