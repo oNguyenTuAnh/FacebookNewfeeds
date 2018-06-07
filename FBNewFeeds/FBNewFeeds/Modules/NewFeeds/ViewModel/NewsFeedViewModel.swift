@@ -13,6 +13,9 @@ class NewsFeedViewModel: NSObject {
     private var backgroundQueue = OperationQueue()
     private weak var mainQueue = OperationQueue.main
     var newsFeeds: Newsfeed?
+    let sectionStories = 0
+    let sectionNewsFeed = 1
+    let heightStoriesTableViewCell: CGFloat = 90.0
 
     override init() {
         backgroundQueue.maxConcurrentOperationCount = 1
@@ -54,7 +57,14 @@ class NewsFeedViewModel: NSObject {
         newsFeeds = data
     }
 
-    func getNumberRowNewsFeed() -> Int {
+    func getNumberSection() -> Int {
+        return 2
+    }
+
+    func getNumberRowOfSection(_ section: Int) -> Int {
+        if section == 0 {
+            return 1
+        }
         return newsFeeds?.feeds?.count ?? 0
     }
 
@@ -69,4 +79,11 @@ class NewsFeedViewModel: NSObject {
         return []
     }
 
+    func isSectionStories(_ index: IndexPath) -> Bool {
+        return index.section == sectionStories
+    }
+
+    func getHeightTableViewCell(_ index: IndexPath) -> CGFloat {
+        return isSectionStories(index) ? heightStoriesTableViewCell : UITableViewAutomaticDimension
+    }
 }

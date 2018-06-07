@@ -13,14 +13,8 @@ class NewsfeedViewController: BaseViewController {
     @IBOutlet weak var newsFeedTableView: UITableView!
 
     let viewModel = NewsFeedViewModel()
-    let cellIdentifier = "feelCell"
-    let heightHeaderTableView: CGFloat = 90.0
-
-    lazy var storyView: StoryView? = {
-        let view = StoryView.initWithDefaultNib()
-        view?.frame = CGRect(x: 0, y: 0, width: newsFeedTableView.bounds.width, height: heightHeaderTableView)
-        return view
-    }()
+    let cellStoriesIdentifier = "storiesCell"
+    let cellNewsFeedIdentifier = "newsFeelCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,30 +28,22 @@ class NewsfeedViewController: BaseViewController {
             style: .plain, target: nil, action: nil)
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic-messenger"),
             style: .plain, target: nil, action: nil)
-        newsFeedTableView.register(FeedTableViewCell.nibDefault(), forCellReuseIdentifier: cellIdentifier)
-        if let headerView = storyView {
-            let tableViewHeader = UIView(frame: headerView.frame)
-            tableViewHeader.addSubview(headerView)
-            newsFeedTableView.tableHeaderView = tableViewHeader
-        }
+        newsFeedTableView.register(StoriesTableViewCell.nibDefault(), forCellReuseIdentifier: cellStoriesIdentifier)
+        newsFeedTableView.register(FeedTableViewCell.nibDefault(), forCellReuseIdentifier: cellNewsFeedIdentifier)
     }
 
     func getData() {
         let progressView = showActivityIndicatory(onView: view)
         viewModel.getData {[weak self] (error) in
-            guard let strongSelf = self else {
-                return
-            }
-            strongSelf.removeActivityIndicatory(indicatorView: progressView)
+            self?.removeActivityIndicatory(indicatorView: progressView)
             if error == nil {
-                strongSelf.refreshView()
+                self?.refreshView()
             }
         }
     }
 
     func refreshView() {
         newsFeedTableView.reloadData()
-        storyView?.reloadData(viewModel.getStoryData())
     }
 
     func showProfile() {
@@ -69,32 +55,43 @@ class NewsfeedViewController: BaseViewController {
 extension NewsfeedViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
-            as? FeedTableViewCell else {
-                return UITableViewCell()
-        }
-        let feedItem = viewModel.getNewsFeedAtIndex(indexPath.row)
-        cell.bindingData(feedItem)
-        cell.selectionStyle = .none
-        cell.actionClickProfile = { [weak self] () in
-            guard let strongSelf = self else {
-                return
+        if viewModel.isSectionStories(indexPath) {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellStoriesIdentifier)
+                as? StoriesTableViewCell else {
+                    return UITableViewCell()
             }
-            strongSelf.showProfile()
+            cell.selectionStyle = .none
+            cell.bindingData(viewModel.getStoryData())
+            return cell
+        } else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellNewsFeedIdentifier)
+                as? FeedTableViewCell else {
+                    return UITableViewCell()
+            }
+            let feedItem = viewModel.getNewsFeedAtIndex(indexPath.row)
+            cell.bindingData(feedItem)
+            cell.selectionStyle = .none
+            cell.actionClickProfile = { [weak self] in
+                self?.showProfile()
+            }
+            return cell
         }
-        return cell
     }
 
 }
 
 extension NewsfeedViewController: UITableViewDelegate {
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getNumberRowNewsFeed()
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.getNumberSection()
     }
 
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.getNumberRowOfSection(section)
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return viewModel.getHeightTableViewCell(indexPath)
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
