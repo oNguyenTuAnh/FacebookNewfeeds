@@ -39,12 +39,14 @@
 		95AD675B20C68C660005CD7C /* AppEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD675A20C68C660005CD7C /* AppEnum.swift */; };
 		95DAB67220C768500042613E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DAB67020C768500042613E /* ProfileViewController.swift */; };
 		95DAB67320C768500042613E /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95DAB67120C768500042613E /* ProfileViewController.xib */; };
-		95DAB67820C768720042613E /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DAB67620C768720042613E /* ProfileHeaderView.swift */; };
-		95DAB67920C768720042613E /* ProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95DAB67720C768720042613E /* ProfileHeaderView.xib */; };
 		95DAB67D20C7806C0042613E /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DAB67C20C7806C0042613E /* ProfileViewModel.swift */; };
 		95DAB67F20C780DB0042613E /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DAB67E20C780DB0042613E /* Profile.swift */; };
 		95DAB68120C780EA0042613E /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DAB68020C780EA0042613E /* About.swift */; };
 		95DAB68320C787670042613E /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DAB68220C787670042613E /* ProfileModel.swift */; };
+		95DAB68720C7CBE40042613E /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DAB68520C7CBE40042613E /* ProfileTableViewCell.swift */; };
+		95DAB68820C7CBE40042613E /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95DAB68620C7CBE40042613E /* ProfileTableViewCell.xib */; };
+		95DAB68C20C7D83C0042613E /* AboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DAB68A20C7D83C0042613E /* AboutTableViewCell.swift */; };
+		95DAB68D20C7D83C0042613E /* AboutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95DAB68B20C7D83C0042613E /* AboutTableViewCell.xib */; };
 		95EA50A420BBF2F700B298AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EA50A320BBF2F700B298AA /* AppDelegate.swift */; };
 		95EA50AB20BBF2F800B298AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95EA50AA20BBF2F800B298AA /* Assets.xcassets */; };
 		95EA50AE20BBF2F800B298AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95EA50AC20BBF2F800B298AA /* LaunchScreen.storyboard */; };
@@ -88,12 +90,14 @@
 		95AD675A20C68C660005CD7C /* AppEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnum.swift; sourceTree = "<group>"; };
 		95DAB67020C768500042613E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		95DAB67120C768500042613E /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		95DAB67620C768720042613E /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
-		95DAB67720C768720042613E /* ProfileHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileHeaderView.xib; sourceTree = "<group>"; };
 		95DAB67C20C7806C0042613E /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		95DAB67E20C780DB0042613E /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		95DAB68020C780EA0042613E /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		95DAB68220C787670042613E /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		95DAB68520C7CBE40042613E /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		95DAB68620C7CBE40042613E /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		95DAB68A20C7D83C0042613E /* AboutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewCell.swift; sourceTree = "<group>"; };
+		95DAB68B20C7D83C0042613E /* AboutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutTableViewCell.xib; sourceTree = "<group>"; };
 		95EA50A020BBF2F700B298AA /* FBNewFeeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBNewFeeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95EA50A320BBF2F700B298AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95EA50AA20BBF2F800B298AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -245,20 +249,11 @@
 		95DAB67420C768720042613E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				95DAB67520C768720042613E /* ProfileHeader */,
+				95DAB68420C7CAF00042613E /* ProfileTableViewCell */,
 				95DAB67020C768500042613E /* ProfileViewController.swift */,
 				95DAB67120C768500042613E /* ProfileViewController.xib */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		95DAB67520C768720042613E /* ProfileHeader */ = {
-			isa = PBXGroup;
-			children = (
-				95DAB67620C768720042613E /* ProfileHeaderView.swift */,
-				95DAB67720C768720042613E /* ProfileHeaderView.xib */,
-			);
-			path = ProfileHeader;
 			sourceTree = "<group>";
 		};
 		95DAB67A20C7802C0042613E /* Models */ = {
@@ -277,6 +272,25 @@
 				95DAB67C20C7806C0042613E /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		95DAB68420C7CAF00042613E /* ProfileTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				95DAB68920C7D82A0042613E /* Cell */,
+				95DAB68520C7CBE40042613E /* ProfileTableViewCell.swift */,
+				95DAB68620C7CBE40042613E /* ProfileTableViewCell.xib */,
+			);
+			path = ProfileTableViewCell;
+			sourceTree = "<group>";
+		};
+		95DAB68920C7D82A0042613E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				95DAB68A20C7D83C0042613E /* AboutTableViewCell.swift */,
+				95DAB68B20C7D83C0042613E /* AboutTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		95EA509720BBF2F700B298AA = {
@@ -431,14 +445,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				95EA50BB20BBF9FD00B298AA /* LoginViewController.xib in Resources */,
+				95DAB68D20C7D83C0042613E /* AboutTableViewCell.xib in Resources */,
 				95EA50AE20BBF2F800B298AA /* LaunchScreen.storyboard in Resources */,
 				9560D3DA20C639D5008E544A /* RegisterViewController.xib in Resources */,
 				95EA50AB20BBF2F800B298AA /* Assets.xcassets in Resources */,
 				9560D3D120C63676008E544A /* NotifyViewController.xib in Resources */,
 				95DAB67320C768500042613E /* ProfileViewController.xib in Resources */,
 				9560D3FC20C63EDE008E544A /* FeedTableViewCell.xib in Resources */,
-				95DAB67920C768720042613E /* ProfileHeaderView.xib in Resources */,
 				95AD675920C68BB00005CD7C /* StoryView.xib in Resources */,
+				95DAB68820C7CBE40042613E /* ProfileTableViewCell.xib in Resources */,
 				95AD675720C68BB00005CD7C /* StoryCollectionViewCell.xib in Resources */,
 				95AD674F20C68B900005CD7C /* ItemPhotoView.xib in Resources */,
 				9560D40020C63EDE008E544A /* NewsfeedViewController.xib in Resources */,
@@ -469,13 +484,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9560D41420C641CA008E544A /* UIImageViewExtension.swift in Sources */,
+				95DAB68C20C7D83C0042613E /* AboutTableViewCell.swift in Sources */,
 				95EA50BA20BBF9FD00B298AA /* LoginViewController.swift in Sources */,
 				95AD675B20C68C660005CD7C /* AppEnum.swift in Sources */,
 				9560D40620C63F0D008E544A /* DateExtension.swift in Sources */,
 				9560D3FF20C63EDE008E544A /* NewsfeedViewController.swift in Sources */,
 				9560D40820C63F12008E544A /* IntExtension.swift in Sources */,
 				9560D40E20C63FA3008E544A /* BaseViewController.swift in Sources */,
-				95DAB67820C768720042613E /* ProfileHeaderView.swift in Sources */,
+				95DAB68720C7CBE40042613E /* ProfileTableViewCell.swift in Sources */,
 				95EF923A20BC01C700998D8D /* BaseNavigationController.swift in Sources */,
 				95DAB68320C787670042613E /* ProfileModel.swift in Sources */,
 				95EF923D20BC028B00998D8D /* MainTabBarController.swift in Sources */,

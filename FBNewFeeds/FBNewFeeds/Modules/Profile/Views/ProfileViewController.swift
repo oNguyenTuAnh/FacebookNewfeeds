@@ -13,13 +13,10 @@ class ProfileViewController: BaseViewController {
     @IBOutlet weak var profileTableView: UITableView!
 
     let viewModel = ProfileViewModel()
-    let cellIdentifier = "feelCell"
-
-    lazy var aboutHeader: ProfileHeaderView? = {
-        let view = ProfileHeaderView.initWithDefaultNib()
-        view?.frame = CGRect(x: 0, y: 0, width: profileTableView.bounds.width, height: 500)
-        return view
-    }()
+    let newsfeedCellIdentifier = "feelCell"
+    let profileCellIdentifier = "profileCell"
+    let sectionProfile: Int = 0
+    let sectionNewsFeed: Int = 1
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,31 +26,22 @@ class ProfileViewController: BaseViewController {
 
     private func setupView() {
         addSearchBarToNavigationItem()
-        profileTableView.register(FeedTableViewCell.nibDefault(), forCellReuseIdentifier: cellIdentifier)
-        if let headerTable = aboutHeader {
-            let tableViewHeader = UIView(frame: CGRect(x: 0, y: 0, width: headerTable.bounds.width,
-                height: headerTable.bounds.height))
-            tableViewHeader.addSubview(headerTable)
-            profileTableView.tableHeaderView = tableViewHeader
-        }
+        profileTableView.register(ProfileTableViewCell.nibDefault(), forCellReuseIdentifier: profileCellIdentifier)
+        profileTableView.register(FeedTableViewCell.nibDefault(), forCellReuseIdentifier: newsfeedCellIdentifier)
     }
 
     func getData() {
         let progressView = showActivityIndicatory(onView: view)
         viewModel.getData {[weak self] (error) in
-            guard let strongSelf = self else {
-                return
-            }
-            strongSelf.removeActivityIndicatory(indicatorView: progressView)
+            self?.removeActivityIndicatory(indicatorView: progressView)
             if error == nil {
-                strongSelf.refreshView()
+                self?.refreshView()
             }
         }
     }
 
     func refreshView() {
         profileTableView.reloadData()
-        aboutHeader?.reloadData(viewModel.getProfile())
     }
 
     func showProfile() {
@@ -65,28 +53,38 @@ class ProfileViewController: BaseViewController {
 extension ProfileViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
-            as? FeedTableViewCell else {
-                return UITableViewCell()
-        }
-        let feedItem = viewModel.getNewsFeedAtIndex(indexPath.row)
-        cell.bindingData(feedItem)
-        cell.selectionStyle = .none
-        cell.actionClickProfile = { [weak self] () in
-            guard let strongSelf = self else {
-                return
+        if indexPath.section == sectionProfile {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: profileCellIdentifier)
+                as? ProfileTableViewCell else {
+                    return UITableViewCell()
             }
-            strongSelf.showProfile()
+            cell.bindingData(viewModel.getProfile())
+            cell.selectionStyle = .none
+            return cell
+        } else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: newsfeedCellIdentifier)
+                as? FeedTableViewCell else {
+                    return UITableViewCell()
+            }
+            cell.bindingData(viewModel.getNewsFeedAtIndex(indexPath.row))
+            cell.selectionStyle = .none
+            cell.actionClickProfile = { [weak self] () in
+                self?.showProfile()
+            }
+            return cell
         }
-        return cell
     }
 
 }
 
 extension ProfileViewController: UITableViewDelegate {
 
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.getNumberSections()
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getNumberRowNewsFeed()
+        return viewModel.getNumberRowOfSection(section: section)
     }
 
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {

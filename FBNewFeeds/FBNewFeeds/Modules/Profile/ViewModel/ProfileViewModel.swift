@@ -54,7 +54,14 @@ class ProfileViewModel: NSObject {
         profileModel = data
     }
 
-    func getNumberRowNewsFeed() -> Int {
+    func getNumberSections() -> Int {
+        return 2
+    }
+
+    func getNumberRowOfSection(section: Int) -> Int {
+        if section == 0 {
+            return 1
+        }
         return profileModel?.feeds?.count ?? 0
     }
 
