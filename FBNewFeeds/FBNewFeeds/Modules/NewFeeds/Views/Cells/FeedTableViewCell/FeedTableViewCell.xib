@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="251" id="KGk-i7-Jjw" customClass="FeedTableViewCell" customModule="FBNewFeeds" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="FeedTableViewCell" customModule="FBNewFeeds" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="251"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -278,7 +278,7 @@
                     <constraint firstItem="Isd-nb-cHt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7an-Gn-C7l"/>
                     <constraint firstAttribute="trailing" secondItem="Isd-nb-cHt" secondAttribute="trailing" id="DDv-b9-dTP"/>
                     <constraint firstItem="pga-hb-lGG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Yx4-F5-ifZ"/>
-                    <constraint firstAttribute="bottom" secondItem="Isd-nb-cHt" secondAttribute="bottom" id="cYJ-7s-EhM"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Isd-nb-cHt" secondAttribute="bottom" id="cYJ-7s-EhM"/>
                     <constraint firstItem="Isd-nb-cHt" firstAttribute="top" secondItem="pga-hb-lGG" secondAttribute="bottom" id="enk-3C-h4L"/>
                     <constraint firstAttribute="trailing" secondItem="pga-hb-lGG" secondAttribute="trailing" id="kb4-wP-aKm"/>
                     <constraint firstItem="pga-hb-lGG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="kxv-gw-zF4"/>

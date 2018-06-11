@@ -16,23 +16,17 @@ class BaseNavigationController: UINavigationController {
     }
 
     func setupView() {
-        delegate = self
         navigationBar.isOpaque = true
         navigationBar.isTranslucent = false
         navigationBar.tintColor = .white
-        navigationBar.barTintColor = AppColor.blueColor
+        navigationBar.barTintColor = AppColor.navigationColor
     }
 
-}
-
-extension BaseNavigationController: UINavigationControllerDelegate {
-
-    func navigationController(_ navigationController: UINavigationController,
-                              willShow viewController: UIViewController, animated: Bool) {
-        if let currentVC = self.topViewController {
-            let itemBack = UIBarButtonItem(title: "", style: .done, target: currentVC, action: nil)
-            currentVC.navigationItem.backBarButtonItem = itemBack
-        }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationBar.topItem?.title = ""
+        navigationItem.backBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic-back"),
+           style: .plain, target: nil, action: nil)
     }
 
 }

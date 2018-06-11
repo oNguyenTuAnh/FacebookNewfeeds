@@ -28,26 +28,27 @@ class MainTabBarController: UITabBarController {
         tabBar.isTranslucent = false
         tabBar.barTintColor = .white
         tabBar.backgroundColor = .white
+        tabBar.tintColor = AppColor.iconTabbarSelectColor
         var listViewController: [UIViewController] = []
         let newsfeedViewController = BaseNavigationController(
             rootViewController: NewsfeedViewController.instantiateFromNib())
         newsfeedViewController.tabBarItem = UITabBarItem(title: "", image: Constants.imgNewsfeed,
-            selectedImage: Constants.imgNewsfeed?.imageWithColor(color: AppColor.blueColor))
+            selectedImage: nil)
         listViewController.append(newsfeedViewController)
 
         let friendViewController = NotifyViewController.instantiateFromNib()
         friendViewController.tabBarItem = UITabBarItem(title: "", image: Constants.imgFriend,
-            selectedImage: Constants.imgFriend?.imageWithColor(color: AppColor.blueColor))
+            selectedImage: nil)
         listViewController.append(friendViewController)
 
         let notifyViewController = NotifyViewController.instantiateFromNib()
         notifyViewController.tabBarItem = UITabBarItem(title: "", image: Constants.imgNotify,
-            selectedImage: Constants.imgNotify?.imageWithColor(color: AppColor.blueColor))
+            selectedImage: nil)
         listViewController.append(notifyViewController)
 
         let menuViewController = NotifyViewController.instantiateFromNib()
         menuViewController.tabBarItem = UITabBarItem(title: "", image: Constants.imgMenu,
-            selectedImage: Constants.imgMenu?.imageWithColor(color: AppColor.blueColor))
+            selectedImage: nil)
         listViewController.append(menuViewController)
 
         for item in listViewController {

@@ -30,13 +30,28 @@ extension UIViewController {
 
     func showActivityIndicatory(onView: UIView) -> UIView {
         let spinnerView = UIView.init(frame: onView.bounds)
+        spinnerView.translatesAutoresizingMaskIntoConstraints = false
         spinnerView.backgroundColor = AppColor.backgroupActivityColor
         let indicatorView = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
+        indicatorView.translatesAutoresizingMaskIntoConstraints = false
         indicatorView.startAnimating()
-        indicatorView.center = spinnerView.center
         DispatchQueue.main.async {
             spinnerView.addSubview(indicatorView)
             onView.addSubview(spinnerView)
+            let viewsDict = ["spinner": spinnerView, "aiView": indicatorView]
+            var horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|[spinner]|",
+                options: [], metrics: nil, views: viewsDict)
+            onView.addConstraints(horizontalConstraints)
+            var verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[spinner]|",
+                options: [], metrics: nil, views: viewsDict)
+            onView.addConstraints(verticalConstraints)
+
+            horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|[aiView]|",
+                options: [], metrics: nil, views: viewsDict)
+            spinnerView.addConstraints(horizontalConstraints)
+            verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[aiView]|",
+                options: [], metrics: nil, views: viewsDict)
+            spinnerView.addConstraints(verticalConstraints)
         }
         return spinnerView
     }

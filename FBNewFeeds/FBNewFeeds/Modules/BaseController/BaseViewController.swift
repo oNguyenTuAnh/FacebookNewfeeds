@@ -12,18 +12,28 @@ class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //extendedLayoutIncludesOpaqueBars = true
     }
 
     func addSearchBarToNavigationItem() {
         let searchBar = UISearchBar(frame: .zero)
-        searchBar.placeholder = "Search"
+        searchBar.searchBarStyle = .minimal
+        searchBar.sizeToFit()
+        searchBar.delegate = self
         let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField
-        textFieldInsideSearchBar?.backgroundColor = UIColor.fromHex("253E68")
+        textFieldInsideSearchBar?.backgroundColor = AppColor.searchBarColor
         textFieldInsideSearchBar?.textColor = .white
-        if #available(iOS 11.0, *) {
-            searchBar.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
-        }
         navigationItem.titleView = searchBar
     }
+
+}
+
+extension BaseViewController: UISearchBarDelegate {
+
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        DispatchQueue.main.async {
+            self.navigationController?.pushViewController(SearchViewController.instantiateFromNib(), animated: false)
+        }
+        return false
+    }
+
 }
