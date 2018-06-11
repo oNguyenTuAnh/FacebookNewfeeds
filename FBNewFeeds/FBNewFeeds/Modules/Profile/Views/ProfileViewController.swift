@@ -26,6 +26,8 @@ class ProfileViewController: BaseViewController {
 
     private func setupView() {
         addSearchBarToNavigationItem()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic-messenger"),
+           style: .plain, target: nil, action: nil)
         profileTableView.register(ProfileTableViewCell.nibDefault(), forCellReuseIdentifier: profileCellIdentifier)
         profileTableView.register(FeedTableViewCell.nibDefault(), forCellReuseIdentifier: newsfeedCellIdentifier)
     }

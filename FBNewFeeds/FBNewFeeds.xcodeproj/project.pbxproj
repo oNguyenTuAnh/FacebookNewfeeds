@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		953B4F2520CE4D8100170A98 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953B4F2320CE4D8100170A98 /* SearchViewController.swift */; };
+		953B4F2620CE4D8100170A98 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 953B4F2420CE4D8100170A98 /* SearchViewController.xib */; };
 		9560D3D120C63676008E544A /* NotifyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9560D3CF20C63676008E544A /* NotifyViewController.xib */; };
 		9560D3D220C63676008E544A /* NotifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9560D3D020C63676008E544A /* NotifyViewController.swift */; };
 		9560D3D520C636AA008E544A /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9560D3D420C636A9008E544A /* AppColor.swift */; };
@@ -58,6 +60,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		953B4F2320CE4D8100170A98 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		953B4F2420CE4D8100170A98 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		9560D3CF20C63676008E544A /* NotifyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotifyViewController.xib; sourceTree = "<group>"; };
 		9560D3D020C63676008E544A /* NotifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyViewController.swift; sourceTree = "<group>"; };
 		9560D3D420C636A9008E544A /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
@@ -121,9 +125,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		953B4F2220CE4D5200170A98 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				953B4F2320CE4D8100170A98 /* SearchViewController.swift */,
+				953B4F2420CE4D8100170A98 /* SearchViewController.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		9560D3CD20C63561008E544A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				953B4F2220CE4D5200170A98 /* Search */,
 				9560D3D620C639D5008E544A /* Register */,
 				9560D3CE20C6365E008E544A /* Notify */,
 				95EA50B720BBF9D200B298AA /* NewFeeds */,
@@ -270,8 +284,8 @@
 				95DAB68B20C7D83C0042613E /* AboutTableViewCell.xib */,
 			);
 			path = Cell;
-            sourceTree = "<group>";
-        };
+			sourceTree = "<group>";
+		};
 		95E0603120C8C04F0098F24A /* FeedTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -458,11 +472,11 @@
 				95E0603620C8C0940098F24A /* StoriesTableViewCell.xib in Resources */,
 				9560D3DA20C639D5008E544A /* RegisterViewController.xib in Resources */,
 				95EA50AB20BBF2F800B298AA /* Assets.xcassets in Resources */,
+				953B4F2620CE4D8100170A98 /* SearchViewController.xib in Resources */,
 				9560D3D120C63676008E544A /* NotifyViewController.xib in Resources */,
 				95DAB67320C768500042613E /* ProfileViewController.xib in Resources */,
 				9560D3FC20C63EDE008E544A /* FeedTableViewCell.xib in Resources */,
 				95DAB68820C7CBE40042613E /* ProfileTableViewCell.xib in Resources */,
-				95DAB67920C768720042613E /* ProfileHeaderView.xib in Resources */,
 				95AD675720C68BB00005CD7C /* StoryCollectionViewCell.xib in Resources */,
 				95AD674F20C68B900005CD7C /* ItemPhotoView.xib in Resources */,
 				9560D40020C63EDE008E544A /* NewsfeedViewController.xib in Resources */,
@@ -522,6 +536,7 @@
 				95DAB67F20C780DB0042613E /* Profile.swift in Sources */,
 				9560D41020C64124008E544A /* UIViewControllerExtension.swift in Sources */,
 				95AD675620C68BB00005CD7C /* StoryCollectionViewCell.swift in Sources */,
+				953B4F2520CE4D8100170A98 /* SearchViewController.swift in Sources */,
 				95EA50A420BBF2F700B298AA /* AppDelegate.swift in Sources */,
 				9560D3EB20C63EAA008E544A /* NewsFeedViewModel.swift in Sources */,
 				9560D3E120C63E75008E544A /* APIServices.swift in Sources */,
@@ -664,6 +679,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FBNewFeeds/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -681,6 +697,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FBNewFeeds/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

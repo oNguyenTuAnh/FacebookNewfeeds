@@ -116,8 +116,6 @@ class FeedTableViewCell: UITableViewCell {
                 }
             }
         }
-
-        photoStackView.setNeedsLayout()
     }
 
     private func creatImageView(_ photo: String, numberHiden: Int = 0) -> UIView {
@@ -132,7 +130,6 @@ class FeedTableViewCell: UITableViewCell {
         photoView.actionTapPhotoClosure = {
             print(photo)
         }
-        photoView.layoutIfNeeded()
         return photoView
     }
 

@@ -10,8 +10,10 @@ import UIKit
 
 class AppColor {
 
-    static let blueColor = UIColor.fromHex("254A85")
-
-    static let backgroupActivityColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+    static let navigationColor = UIColor.fromHex("4167b2")
+    static let backgroupActivityColor = UIColor.gray.withAlphaComponent(0.5)
+    static let iconTabbarSelectColor = UIColor.fromHex("658ff7")
+    static let searchBarColor = UIColor.fromHex("2d487c")
+    static let borderItemStoryColor = UIColor.fromHex("507df7")
 
 }
