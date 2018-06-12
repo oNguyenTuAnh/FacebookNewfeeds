@@ -19,6 +19,9 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var createAt: UILabel!
     @IBOutlet weak var photoStackView: UIStackView!
     @IBOutlet weak var heightPhotoStackViewLayout: NSLayoutConstraint!
+    @IBOutlet weak var likeButton: UIButton!
+
+    var feedData: Feeds?
 
     var actionClickProfile: (() -> Void)?
     var layoutType = PhotoLayoutType.horizontal {
@@ -52,9 +55,12 @@ class FeedTableViewCell: UITableViewCell {
         avatar.addGestureRecognizer(avatarTabGesture)
         fullName.isUserInteractionEnabled = true
         fullName.addGestureRecognizer(nameTabGesture)
+        let likeLongPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(showProfile(_:)))
+        likeButton.addGestureRecognizer(likeLongPressGesture)
     }
 
     func bindingData(_ feed: Feeds?) {
+        feedData = feed
         if let avatarUrl = feed?.avatarUrl {
             avatar.downloadedFrom(link: avatarUrl)
         }
@@ -142,10 +148,20 @@ class FeedTableViewCell: UITableViewCell {
         })
     }
 
+    //MARK: Profile
     @objc func showProfile(_ gesture: UITapGestureRecognizer) {
         if let action = actionClickProfile {
             action()
         }
+    }
+
+    //MARK: Like
+    @IBAction func actionLike(_ sender: UIButton) {
+        //TODOs: like
+    }
+
+    @objc func showEmoji(_ gesture: UILongPressGestureRecognizer) {
+        //TODOs: Show popover emoji
     }
 
 }

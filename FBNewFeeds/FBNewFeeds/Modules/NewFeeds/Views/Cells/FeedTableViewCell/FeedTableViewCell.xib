@@ -158,10 +158,20 @@
                                             <constraint firstAttribute="bottom" secondItem="yIS-ze-5V4" secondAttribute="bottom" id="sjr-kJ-LuH"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXO-YL-JLw">
+                                        <rect key="frame" x="0.0" y="0.0" width="106.5" height="34"/>
+                                        <connections>
+                                            <action selector="actionLike:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="eH0-IX-QQ3"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="QTF-Bh-kq3" firstAttribute="centerX" secondItem="l3G-nP-84x" secondAttribute="centerX" id="3Ye-me-I16"/>
+                                    <constraint firstItem="cXO-YL-JLw" firstAttribute="top" secondItem="l3G-nP-84x" secondAttribute="top" id="F92-bJ-S4h"/>
+                                    <constraint firstItem="cXO-YL-JLw" firstAttribute="leading" secondItem="l3G-nP-84x" secondAttribute="leading" id="GP0-J4-9cl"/>
+                                    <constraint firstAttribute="trailing" secondItem="cXO-YL-JLw" secondAttribute="trailing" id="Tbv-0k-9Li"/>
+                                    <constraint firstAttribute="bottom" secondItem="cXO-YL-JLw" secondAttribute="bottom" id="bBJ-8K-tZn"/>
                                     <constraint firstItem="QTF-Bh-kq3" firstAttribute="centerY" secondItem="l3G-nP-84x" secondAttribute="centerY" id="mRu-mT-ytX"/>
                                 </constraints>
                             </view>
@@ -292,6 +302,7 @@
                 <outlet property="createAt" destination="tPf-rf-XLM" id="3U8-bJ-tWQ"/>
                 <outlet property="fullName" destination="Kma-8p-STl" id="anG-Cp-3vz"/>
                 <outlet property="heightPhotoStackViewLayout" destination="Ln5-iO-CNL" id="iC5-bm-URI"/>
+                <outlet property="likeButton" destination="cXO-YL-JLw" id="P2q-BM-l6g"/>
                 <outlet property="numberComment" destination="mmh-m0-v1Z" id="dgJ-2h-b9B"/>
                 <outlet property="numberLike" destination="M2B-yL-P7h" id="yJD-0y-4b8"/>
                 <outlet property="numberShare" destination="wug-1G-4c9" id="hB4-yv-2db"/>
