@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Feeds: Codable {
+class Feeds: NSObject, Codable {
 
     let fullName: String?
     let avatarUrl: String?
@@ -19,6 +19,7 @@ struct Feeds: Codable {
     let commentCount: Int?
     let sharingCount: Int?
     let feedImages: [String]?
+    var isLike = false
 
     enum CodingKeys: String, CodingKey {
         case fullName
@@ -32,7 +33,7 @@ struct Feeds: Codable {
         case feedImages
     }
 
-    init(from decoder: Decoder) throws {
+    required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         fullName = try values.decodeIfPresent(String.self, forKey: .fullName)
         avatarUrl = try values.decodeIfPresent(String.self, forKey: .avatarUrl)
@@ -43,6 +44,10 @@ struct Feeds: Codable {
         commentCount = try values.decodeIfPresent(Int.self, forKey: .commentCount)
         sharingCount = try values.decodeIfPresent(Int.self, forKey: .sharingCount)
         feedImages = try values.decodeIfPresent([String].self, forKey: .feedImages)
+    }
+
+    func like() {
+        isLike = !isLike
     }
 
 }

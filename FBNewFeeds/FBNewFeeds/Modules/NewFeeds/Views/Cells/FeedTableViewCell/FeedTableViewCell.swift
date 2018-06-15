@@ -20,10 +20,13 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var photoStackView: UIStackView!
     @IBOutlet weak var heightPhotoStackViewLayout: NSLayoutConstraint!
     @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var likeText: UILabel!
+    @IBOutlet weak var likeIcon: UIImageView!
 
     var feedData: Feeds?
 
     var actionClickProfile: (() -> Void)?
+    var longPressLikeAction: ((UIView) -> Void)?
     var layoutType = PhotoLayoutType.horizontal {
         didSet {
             if layoutType == .horizontal {
@@ -48,14 +51,14 @@ class FeedTableViewCell: UITableViewCell {
         setupView()
     }
 
-    func setupView() {
+    private func setupView() {
         let avatarTabGesture = UITapGestureRecognizer(target: self, action: #selector(showProfile(_:)))
         let nameTabGesture = UITapGestureRecognizer(target: self, action: #selector(showProfile(_:)))
         avatar.isUserInteractionEnabled = true
         avatar.addGestureRecognizer(avatarTabGesture)
         fullName.isUserInteractionEnabled = true
         fullName.addGestureRecognizer(nameTabGesture)
-        let likeLongPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(showProfile(_:)))
+        let likeLongPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(showEmoji(_:)))
         likeButton.addGestureRecognizer(likeLongPressGesture)
     }
 
@@ -75,7 +78,6 @@ class FeedTableViewCell: UITableViewCell {
             numberShare.text = share.abbreviated
         }
         content.text = feed?.feedContent
-
         if let dateString = feed?.createAt {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
@@ -83,6 +85,7 @@ class FeedTableViewCell: UITableViewCell {
                  createAt.text = date.timestampString
             }
         }
+        updateLikeButton()
         photoStackView.removeAllSubviews()
         subStackView.removeAllSubviews()
         if let imgFeed = feed?.feedImages, imgFeed.count > 0 {
@@ -95,7 +98,6 @@ class FeedTableViewCell: UITableViewCell {
 
     private func bindingPhoto(_ photos: [String]) {
         updateLayoutPhoto(photos)
-
         if photos.count <= 2 {
             for photo in photos {
                 photoStackView.addArrangedSubview(creatImageView(photo))
@@ -148,20 +150,33 @@ class FeedTableViewCell: UITableViewCell {
         })
     }
 
-    //MARK: Profile
-    @objc func showProfile(_ gesture: UITapGestureRecognizer) {
+    // MARK: Profile
+    @objc private func showProfile(_ gesture: UITapGestureRecognizer) {
         if let action = actionClickProfile {
             action()
         }
     }
 
-    //MARK: Like
+    // MARK: Like
     @IBAction func actionLike(_ sender: UIButton) {
-        //TODOs: like
+        feedData?.like()
+        updateLikeButton()
     }
 
-    @objc func showEmoji(_ gesture: UILongPressGestureRecognizer) {
-        //TODOs: Show popover emoji
+    func updateLikeButton() {
+        if feedData?.isLike == true {
+            likeText.textColor = AppColor.selectedButtonColor
+            likeIcon.image = likeIcon.image?.imageWithColor(color: AppColor.selectedButtonColor)
+        } else {
+            likeText.textColor = AppColor.defaultButtonColor
+            likeIcon.image = likeIcon.image?.imageWithColor(color: AppColor.defaultButtonColor)
+        }
+    }
+
+    @objc private func showEmoji(_ gesture: UILongPressGestureRecognizer) {
+        if gesture.state == .began, let action = longPressLikeAction, let sender = gesture.view {
+            action(sender)
+        }
     }
 
 }

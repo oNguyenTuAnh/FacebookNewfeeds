@@ -53,10 +53,18 @@ class NewsFeedViewModel: NSObject {
         }
     }
 
+    // MARK: SET METHOD
     func setDataNewsfeed(_ data: Newsfeed) {
         newsFeeds = data
     }
 
+    func setLikedForFeedAtIndex(_ index: IndexPath) {
+        if let like = newsFeeds?.feeds?[index.row].isLike, !like {
+            newsFeeds?.feeds?[index.row].like()
+        }
+    }
+
+    // MARK: GET METHOD
     func getNumberSection() -> Int {
         return 2
     }
