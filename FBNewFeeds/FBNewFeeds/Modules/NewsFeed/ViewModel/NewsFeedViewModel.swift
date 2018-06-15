@@ -58,10 +58,8 @@ class NewsFeedViewModel: NSObject {
         newsFeeds = data
     }
 
-    func setLikedForFeedAtIndex(_ index: IndexPath) {
-        if let like = newsFeeds?.feeds?[index.row].isLike, !like {
-            newsFeeds?.feeds?[index.row].like()
-        }
+    func setLikedForFeedAtIndex(_ index: IndexPath, _ tag: Int) {
+        newsFeeds?.feeds?[index.row].updateEmoji(tag)
     }
 
     // MARK: GET METHOD
@@ -76,8 +74,8 @@ class NewsFeedViewModel: NSObject {
         return newsFeeds?.feeds?.count ?? 0
     }
 
-    func getNewsFeedAtIndex(_ index: Int) -> Feeds? {
-        return newsFeeds?.feeds?[index]
+    func getNewsFeedAtIndex(_ index: IndexPath) -> Feeds? {
+        return newsFeeds?.feeds?[index.row]
     }
 
     func getStoryData() -> [Stories] {

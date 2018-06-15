@@ -19,7 +19,8 @@ class Feeds: NSObject, Codable {
     let commentCount: Int?
     let sharingCount: Int?
     let feedImages: [String]?
-    var isLike = false
+    var emoji = Emoji.unknown
+    let comment: [Comment]?
 
     enum CodingKeys: String, CodingKey {
         case fullName
@@ -31,6 +32,7 @@ class Feeds: NSObject, Codable {
         case commentCount
         case sharingCount
         case feedImages
+        case comment
     }
 
     required init(from decoder: Decoder) throws {
@@ -44,10 +46,14 @@ class Feeds: NSObject, Codable {
         commentCount = try values.decodeIfPresent(Int.self, forKey: .commentCount)
         sharingCount = try values.decodeIfPresent(Int.self, forKey: .sharingCount)
         feedImages = try values.decodeIfPresent([String].self, forKey: .feedImages)
+        comment = try values.decodeIfPresent([Comment].self, forKey: .comment)
     }
 
     func like() {
-        isLike = !isLike
+        emoji = emoji == .unknown ? .like : .unknown
     }
 
+    func updateEmoji(_ tag: Int) {
+        emoji = Emoji.getEmoji(tag)
+    }
 }

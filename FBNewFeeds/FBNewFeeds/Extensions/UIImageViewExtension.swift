@@ -35,8 +35,7 @@ extension UIImageView {
         let bezierPath = UIBezierPath()
         let toPoint = CGPoint(x: 10, y: frame.origin.y)
         let rangeX = frame.origin.x / 3
-        let rangeY = frame.origin.x * 2 / 3
-        let cp2 = CGPoint(x: frame.origin.x - rangeX, y: frame.origin.y - rangeY)
+        let cp2 = CGPoint(x: frame.origin.x - rangeX, y: frame.origin.y - 100)
         bezierPath.move(to: center)
         bezierPath.addQuadCurve(to: toPoint, controlPoint: cp2)
         let animation = CAKeyframeAnimation(keyPath: "position")

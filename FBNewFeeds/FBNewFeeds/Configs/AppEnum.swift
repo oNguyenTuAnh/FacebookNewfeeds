@@ -62,3 +62,73 @@ enum AboutType {
         }
     }
 }
+
+enum Emoji: Int {
+
+    case like
+    case love
+    case haha
+    case wow
+    case sad
+    case agrry
+    case unknown
+
+    static func getEmoji(_ value: Int) -> Emoji {
+        guard let emoji = Emoji(rawValue: value) else {
+            return .unknown
+        }
+        return emoji
+    }
+
+    func getIconEmoji() -> UIImage? {
+        switch self {
+        case .like:
+            return UIImage(named: "ic-like")?.imageWithColor(color: AppColor.selectedButtonColor)
+        case .love:
+            return UIImage(named: "ic-love")
+        case .haha:
+            return UIImage(named: "ic-haha")
+        case .wow:
+            return UIImage(named: "ic-wow")
+        case .sad:
+            return UIImage(named: "ic-sad")
+        case .agrry:
+            return UIImage(named: "ic-agrry")
+        default:
+            return UIImage(named: "ic-like")
+        }
+    }
+
+    func getTextEmoji() -> String? {
+        switch self {
+        case .like, .unknown:
+            return "Like"
+        case .love:
+            return "Love"
+        case .haha:
+            return "Haha"
+        case .wow:
+            return "Wow"
+        case .sad:
+            return "Sad"
+        case .agrry:
+            return "Agrry"
+        }
+    }
+
+    func getColorTextEmoji() -> UIColor {
+        switch self {
+        case .like:
+            return AppColor.selectedButtonColor
+        case .love:
+            return AppColor.lovelTextColor
+        case .haha, .wow, .sad:
+            return AppColor.hahaTextColor
+        case .agrry:
+            return AppColor.agrryTextColor
+        default:
+            return AppColor.defaultButtonColor
+        }
+    }
+
+}

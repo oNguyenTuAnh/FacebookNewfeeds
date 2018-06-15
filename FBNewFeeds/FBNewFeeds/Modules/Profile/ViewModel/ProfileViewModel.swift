@@ -54,6 +54,10 @@ class ProfileViewModel: NSObject {
         profileModel = data
     }
 
+    func setLikedForFeedAtIndex(_ index: IndexPath, _ tag: Int) {
+        profileModel?.feeds?[index.row].updateEmoji(tag)
+    }
+
     func getNumberSections() -> Int {
         return 2
     }
@@ -65,8 +69,8 @@ class ProfileViewModel: NSObject {
         return profileModel?.feeds?.count ?? 0
     }
 
-    func getNewsFeedAtIndex(_ index: Int) -> Feeds? {
-        return profileModel?.feeds?[index]
+    func getNewsFeedAtIndex(_ index: IndexPath) -> Feeds? {
+        return profileModel?.feeds?[index.row]
     }
 
     func getProfile() -> Profile? {

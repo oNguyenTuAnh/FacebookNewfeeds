@@ -22,6 +22,7 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var likeText: UILabel!
     @IBOutlet weak var likeIcon: UIImageView!
+    @IBOutlet weak var paddingTopLayout: NSLayoutConstraint!
 
     var feedData: Feeds?
 
@@ -62,21 +63,19 @@ class FeedTableViewCell: UITableViewCell {
         likeButton.addGestureRecognizer(likeLongPressGesture)
     }
 
-    func bindingData(_ feed: Feeds?) {
+    func bindingData(_ feed: Feeds?, paddingtop: CGFloat = 5) {
         feedData = feed
         if let avatarUrl = feed?.avatarUrl {
             avatar.downloadedFrom(link: avatarUrl)
         }
         fullName.text = feed?.fullName
-        if let like = feed?.reactionCount {
-            numberLike.text = like.abbreviated
-        }
         if let comment = feed?.commentCount {
             numberComment.text = comment.abbreviated
         }
         if let share = feed?.sharingCount {
             numberShare.text = share.abbreviated
         }
+        paddingTopLayout.constant = paddingtop
         content.text = feed?.feedContent
         if let dateString = feed?.createAt {
             let dateFormatter = DateFormatter()
@@ -164,12 +163,14 @@ class FeedTableViewCell: UITableViewCell {
     }
 
     func updateLikeButton() {
-        if feedData?.isLike == true {
-            likeText.textColor = AppColor.selectedButtonColor
-            likeIcon.image = likeIcon.image?.imageWithColor(color: AppColor.selectedButtonColor)
-        } else {
-            likeText.textColor = AppColor.defaultButtonColor
-            likeIcon.image = likeIcon.image?.imageWithColor(color: AppColor.defaultButtonColor)
+        guard let emoji = feedData?.emoji else {
+            return
+        }
+        likeText.text = emoji.getTextEmoji()
+        likeText.textColor = emoji.getColorTextEmoji()
+        likeIcon.image = emoji.getIconEmoji()
+        if let like = feedData?.reactionCount {
+            numberLike.text = emoji != .unknown ? "You and \(like.abbreviated) others" : like.abbreviated
         }
     }
 

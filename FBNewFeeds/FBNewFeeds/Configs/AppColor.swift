@@ -17,5 +17,8 @@ class AppColor {
     static let borderItemStoryColor = UIColor.fromHex("507df7")
     static let defaultButtonColor = UIColor.fromHex("91949b")
     static let selectedButtonColor = UIColor.fromHex("4a66ad")
+    static let lovelTextColor = UIColor.fromHex("e75d6d")
+    static let hahaTextColor = UIColor.fromHex("faa037")
+    static let agrryTextColor = UIColor.fromHex("fa6765")
 
 }

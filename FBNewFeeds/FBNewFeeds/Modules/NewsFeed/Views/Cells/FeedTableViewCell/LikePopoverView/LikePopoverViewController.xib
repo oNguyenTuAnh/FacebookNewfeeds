@@ -24,22 +24,22 @@
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jFw-JJ-PNl">
                     <rect key="frame" x="8" y="0.0" width="244" height="40"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" tag="1" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-like2" translatesAutoresizingMaskIntoConstraints="NO" id="dkL-I3-Oms">
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-like2" translatesAutoresizingMaskIntoConstraints="NO" id="dkL-I3-Oms">
                             <rect key="frame" x="0.0" y="0.0" width="40.5" height="40"/>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" tag="2" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-love" translatesAutoresizingMaskIntoConstraints="NO" id="0Jl-ou-luh">
+                        <imageView userInteractionEnabled="NO" tag="1" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-love" translatesAutoresizingMaskIntoConstraints="NO" id="0Jl-ou-luh">
                             <rect key="frame" x="40.5" y="0.0" width="41" height="40"/>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" tag="3" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-haha" translatesAutoresizingMaskIntoConstraints="NO" id="7Wb-5C-kWk">
+                        <imageView userInteractionEnabled="NO" tag="2" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-haha" translatesAutoresizingMaskIntoConstraints="NO" id="7Wb-5C-kWk">
                             <rect key="frame" x="81.5" y="0.0" width="40.5" height="40"/>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" tag="4" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-wow" translatesAutoresizingMaskIntoConstraints="NO" id="95L-wL-EYE">
+                        <imageView userInteractionEnabled="NO" tag="3" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-wow" translatesAutoresizingMaskIntoConstraints="NO" id="95L-wL-EYE">
                             <rect key="frame" x="122" y="0.0" width="40.5" height="40"/>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" tag="5" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-sad" translatesAutoresizingMaskIntoConstraints="NO" id="r30-VK-cku">
+                        <imageView userInteractionEnabled="NO" tag="4" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-sad" translatesAutoresizingMaskIntoConstraints="NO" id="r30-VK-cku">
                             <rect key="frame" x="162.5" y="0.0" width="41" height="40"/>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" tag="6" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-agrry" translatesAutoresizingMaskIntoConstraints="NO" id="IwF-zL-mrE">
+                        <imageView userInteractionEnabled="NO" tag="5" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-agrry" translatesAutoresizingMaskIntoConstraints="NO" id="IwF-zL-mrE">
                             <rect key="frame" x="203.5" y="0.0" width="40.5" height="40"/>
                         </imageView>
                     </subviews>

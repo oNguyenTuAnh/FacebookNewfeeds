@@ -53,7 +53,7 @@ class ProfileViewController: BaseViewController {
 }
 
 extension ProfileViewController: UITableViewDataSource {
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == sectionProfile {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: profileCellIdentifier)
@@ -68,10 +68,16 @@ extension ProfileViewController: UITableViewDataSource {
                 as? FeedTableViewCell else {
                     return UITableViewCell()
             }
-            cell.bindingData(viewModel.getNewsFeedAtIndex(indexPath.row))
+            cell.bindingData(viewModel.getNewsFeedAtIndex(indexPath))
             cell.selectionStyle = .none
             cell.actionClickProfile = { [weak self] () in
                 self?.showProfile()
+            }
+            cell.longPressLikeAction = { [weak self] (view) in
+                self?.showPopoverEmoji(view, { [weak self] (tag) in
+                    self?.viewModel.setLikedForFeedAtIndex(indexPath, tag)
+                    self?.updateLikeOfCell(tableView, indexPath)
+                })
             }
             return cell
         }
@@ -94,7 +100,8 @@ extension ProfileViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath)
+        let detailViewController = DetailNewsfeedViewController.viewController(viewModel.getNewsFeedAtIndex(indexPath))
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
 
 }

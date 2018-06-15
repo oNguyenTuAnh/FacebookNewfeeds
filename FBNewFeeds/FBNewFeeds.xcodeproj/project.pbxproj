@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		953B4F2520CE4D8100170A98 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953B4F2320CE4D8100170A98 /* SearchViewController.swift */; };
 		953B4F2620CE4D8100170A98 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 953B4F2420CE4D8100170A98 /* SearchViewController.xib */; };
+		954AF42020D3992900EEDB4E /* DetailNewsfeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954AF41E20D3992900EEDB4E /* DetailNewsfeedViewController.swift */; };
+		954AF42120D3992900EEDB4E /* DetailNewsfeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954AF41F20D3992900EEDB4E /* DetailNewsfeedViewController.xib */; };
+		954AF42320D399B600EEDB4E /* DetailNewsfeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954AF42220D399B600EEDB4E /* DetailNewsfeedViewModel.swift */; };
+		954AF42620D3A05D00EEDB4E /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954AF42520D3A05D00EEDB4E /* Comment.swift */; };
+		954AF42A20D3A5CB00EEDB4E /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954AF42820D3A5CB00EEDB4E /* CommentTableViewCell.swift */; };
+		954AF42B20D3A5CB00EEDB4E /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954AF42920D3A5CB00EEDB4E /* CommentTableViewCell.xib */; };
 		9560D3D120C63676008E544A /* NotifyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9560D3CF20C63676008E544A /* NotifyViewController.xib */; };
 		9560D3D220C63676008E544A /* NotifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9560D3D020C63676008E544A /* NotifyViewController.swift */; };
 		9560D3D520C636AA008E544A /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9560D3D420C636A9008E544A /* AppColor.swift */; };
@@ -64,6 +70,12 @@
 /* Begin PBXFileReference section */
 		953B4F2320CE4D8100170A98 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		953B4F2420CE4D8100170A98 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		954AF41E20D3992900EEDB4E /* DetailNewsfeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsfeedViewController.swift; sourceTree = "<group>"; };
+		954AF41F20D3992900EEDB4E /* DetailNewsfeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailNewsfeedViewController.xib; sourceTree = "<group>"; };
+		954AF42220D399B600EEDB4E /* DetailNewsfeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsfeedViewModel.swift; sourceTree = "<group>"; };
+		954AF42520D3A05D00EEDB4E /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		954AF42820D3A5CB00EEDB4E /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		954AF42920D3A5CB00EEDB4E /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		9560D3CF20C63676008E544A /* NotifyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotifyViewController.xib; sourceTree = "<group>"; };
 		9560D3D020C63676008E544A /* NotifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyViewController.swift; sourceTree = "<group>"; };
 		9560D3D420C636A9008E544A /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
@@ -138,13 +150,59 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		954AF41A20D3987200EEDB4E /* DetailNewsFeed */ = {
+			isa = PBXGroup;
+			children = (
+				954AF42420D3A04E00EEDB4E /* Models */,
+				954AF41C20D398C500EEDB4E /* ViewModel */,
+				954AF41B20D398BD00EEDB4E /* Views */,
+			);
+			path = DetailNewsFeed;
+			sourceTree = "<group>";
+		};
+		954AF41B20D398BD00EEDB4E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				954AF42720D3A5A900EEDB4E /* Cell */,
+				954AF41E20D3992900EEDB4E /* DetailNewsfeedViewController.swift */,
+				954AF41F20D3992900EEDB4E /* DetailNewsfeedViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		954AF41C20D398C500EEDB4E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				954AF42220D399B600EEDB4E /* DetailNewsfeedViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		954AF42420D3A04E00EEDB4E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				954AF42520D3A05D00EEDB4E /* Comment.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		954AF42720D3A5A900EEDB4E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				954AF42820D3A5CB00EEDB4E /* CommentTableViewCell.swift */,
+				954AF42920D3A5CB00EEDB4E /* CommentTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		9560D3CD20C63561008E544A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				954AF41A20D3987200EEDB4E /* DetailNewsFeed */,
 				953B4F2220CE4D5200170A98 /* Search */,
 				9560D3D620C639D5008E544A /* Register */,
 				9560D3CE20C6365E008E544A /* Notify */,
-				95EA50B720BBF9D200B298AA /* NewFeeds */,
+				95EA50B720BBF9D200B298AA /* NewsFeed */,
 				95EA50B620BBF9BB00B298AA /* Profile */,
 				95EA50B520BBF9B100B298AA /* Login */,
 				95EF923B20BC025800998D8D /* TabBar */,
@@ -380,14 +438,14 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		95EA50B720BBF9D200B298AA /* NewFeeds */ = {
+		95EA50B720BBF9D200B298AA /* NewsFeed */ = {
 			isa = PBXGroup;
 			children = (
 				9560D3E220C63EA2008E544A /* Models */,
 				9560D3EC20C63EDE008E544A /* Views */,
 				9560D3E920C63EAA008E544A /* ViewModel */,
 			);
-			path = NewFeeds;
+			path = NewsFeed;
 			sourceTree = "<group>";
 		};
 		95EF923520BBFAED00998D8D /* Extensions */ = {
@@ -488,8 +546,10 @@
 				95EA50AB20BBF2F800B298AA /* Assets.xcassets in Resources */,
 				953B4F2620CE4D8100170A98 /* SearchViewController.xib in Resources */,
 				9560D3D120C63676008E544A /* NotifyViewController.xib in Resources */,
+				954AF42120D3992900EEDB4E /* DetailNewsfeedViewController.xib in Resources */,
 				95DAB67320C768500042613E /* ProfileViewController.xib in Resources */,
 				9560D3FC20C63EDE008E544A /* FeedTableViewCell.xib in Resources */,
+				954AF42B20D3A5CB00EEDB4E /* CommentTableViewCell.xib in Resources */,
 				95DAB68820C7CBE40042613E /* ProfileTableViewCell.xib in Resources */,
 				95CF4B6520CFA4C900504254 /* LikePopoverViewController.xib in Resources */,
 				95AD675720C68BB00005CD7C /* StoryCollectionViewCell.xib in Resources */,
@@ -539,12 +599,14 @@
 				9560D3D220C63676008E544A /* NotifyViewController.swift in Sources */,
 				95EF924120BC089000998D8D /* UIColorExtension.swift in Sources */,
 				95DAB67220C768500042613E /* ProfileViewController.swift in Sources */,
+				954AF42320D399B600EEDB4E /* DetailNewsfeedViewModel.swift in Sources */,
 				9560D3FB20C63EDE008E544A /* FeedTableViewCell.swift in Sources */,
 				9560D3E820C63EA2008E544A /* Stories.swift in Sources */,
 				9560D3E020C63E75008E544A /* APIRequestProvider.swift in Sources */,
 				9560D3D920C639D5008E544A /* RegisterViewController.swift in Sources */,
 				9560D3E720C63EA2008E544A /* Newsfeed.swift in Sources */,
 				9562B51720BD294900C8F236 /* Utilities.swift in Sources */,
+				954AF42A20D3A5CB00EEDB4E /* CommentTableViewCell.swift in Sources */,
 				9560D3E620C63EA2008E544A /* Feeds.swift in Sources */,
 				9560D40A20C63F23008E544A /* UIViewExtension.swift in Sources */,
 				95AD674E20C68B900005CD7C /* ItemPhotoView.swift in Sources */,
@@ -555,6 +617,8 @@
 				95EA50A420BBF2F700B298AA /* AppDelegate.swift in Sources */,
 				9560D3EB20C63EAA008E544A /* NewsFeedViewModel.swift in Sources */,
 				9560D3E120C63E75008E544A /* APIServices.swift in Sources */,
+				954AF42620D3A05D00EEDB4E /* Comment.swift in Sources */,
+				954AF42020D3992900EEDB4E /* DetailNewsfeedViewController.swift in Sources */,
 				95CF4B6420CFA4C900504254 /* LikePopoverViewController.swift in Sources */,
 				9560D41220C64194008E544A /* UIImageExtension.swift in Sources */,
 				95E0603520C8C0940098F24A /* StoriesTableViewCell.swift in Sources */,
