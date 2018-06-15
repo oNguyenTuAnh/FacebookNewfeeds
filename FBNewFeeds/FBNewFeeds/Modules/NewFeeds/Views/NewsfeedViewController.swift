@@ -50,6 +50,48 @@ class NewsfeedViewController: BaseViewController {
         navigationController?.pushViewController(ProfileViewController.instantiateFromNib(), animated: true)
     }
 
+    func showPopoverEmoji(_ view: UIView, _ index: IndexPath) {
+        let emojiView = LikePopoverViewController.instantiateFromNib()
+        emojiView.modalPresentationStyle = .popover
+        emojiView.preferredContentSize = CGSize(width: 240, height: 30)
+        emojiView.selectEmojiClosure = { [weak self] (imageView, gesture) in
+            self?.animationImage(imageView, gesture, index)
+        }
+        let popoverView = emojiView.popoverPresentationController
+        popoverView?.delegate = self
+        popoverView?.sourceView = view
+        popoverView?.sourceRect = view.bounds
+        popoverView?.permittedArrowDirections = [.up, .down]
+        popoverView?.backgroundColor = .clear
+        present(emojiView, animated: true, completion: nil)
+    }
+
+    func animationImage(_ imgView: UIImageView, _ gesture: UITapGestureRecognizer, _ index: IndexPath) {
+        let imageView = UIImageView(image: imgView.image)
+        imageView.contentMode = .scaleAspectFit
+        let point = gesture.location(in: view)
+        imageView.center = point
+        imageView.translatesAutoresizingMaskIntoConstraints = true
+        imageView.moveEmojiSelected()
+        imageView.transformEmojiSelected()
+        view.addSubview(imageView)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
+            imageView.removeFromSuperview()
+            self?.viewModel.setLikedForFeedAtIndex(index)
+            self?.updateLikeOfCell(index)
+        }
+    }
+
+}
+
+extension NewsfeedViewController {
+
+    func updateLikeOfCell(_ indexPath: IndexPath) {
+        if let cell = newsFeedTableView.cellForRow(at: indexPath) as? FeedTableViewCell {
+            cell.updateLikeButton()
+        }
+    }
+
 }
 
 extension NewsfeedViewController: UITableViewDataSource {
@@ -73,6 +115,9 @@ extension NewsfeedViewController: UITableViewDataSource {
             cell.selectionStyle = .none
             cell.actionClickProfile = { [weak self] in
                 self?.showProfile()
+            }
+            cell.longPressLikeAction = { [weak self] (view) in
+                self?.showPopoverEmoji(view, indexPath)
             }
             return cell
         }
@@ -100,6 +145,14 @@ extension NewsfeedViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300.0
+    }
+
+}
+
+extension NewsfeedViewController: UIPopoverPresentationControllerDelegate {
+
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
     }
 
 }

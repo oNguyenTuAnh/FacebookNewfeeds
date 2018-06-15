@@ -37,8 +37,8 @@
 		95AD675620C68BB00005CD7C /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD675220C68BB00005CD7C /* StoryCollectionViewCell.swift */; };
 		95AD675720C68BB00005CD7C /* StoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95AD675320C68BB00005CD7C /* StoryCollectionViewCell.xib */; };
 		95AD675B20C68C660005CD7C /* AppEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD675A20C68C660005CD7C /* AppEnum.swift */; };
-		95CF4B6420CFA4C900504254 /* LikePopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF4B6220CFA4C900504254 /* LikePopOverViewController.swift */; };
-		95CF4B6520CFA4C900504254 /* LikePopOverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95CF4B6320CFA4C900504254 /* LikePopOverViewController.xib */; };
+		95CF4B6420CFA4C900504254 /* LikePopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF4B6220CFA4C900504254 /* LikePopoverViewController.swift */; };
+		95CF4B6520CFA4C900504254 /* LikePopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95CF4B6320CFA4C900504254 /* LikePopoverViewController.xib */; };
 		95DAB67220C768500042613E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DAB67020C768500042613E /* ProfileViewController.swift */; };
 		95DAB67320C768500042613E /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95DAB67120C768500042613E /* ProfileViewController.xib */; };
 		95DAB67D20C7806C0042613E /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DAB67C20C7806C0042613E /* ProfileViewModel.swift */; };
@@ -92,8 +92,8 @@
 		95AD675220C68BB00005CD7C /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		95AD675320C68BB00005CD7C /* StoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		95AD675A20C68C660005CD7C /* AppEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnum.swift; sourceTree = "<group>"; };
-		95CF4B6220CFA4C900504254 /* LikePopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePopOverViewController.swift; sourceTree = "<group>"; };
-		95CF4B6320CFA4C900504254 /* LikePopOverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikePopOverViewController.xib; sourceTree = "<group>"; };
+		95CF4B6220CFA4C900504254 /* LikePopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePopoverViewController.swift; sourceTree = "<group>"; };
+		95CF4B6320CFA4C900504254 /* LikePopoverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikePopoverViewController.xib; sourceTree = "<group>"; };
 		95DAB67020C768500042613E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		95DAB67120C768500042613E /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		95DAB67C20C7806C0042613E /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -246,8 +246,8 @@
 		95CF4B6120CFA04200504254 /* LikePopoverView */ = {
 			isa = PBXGroup;
 			children = (
-				95CF4B6220CFA4C900504254 /* LikePopOverViewController.swift */,
-				95CF4B6320CFA4C900504254 /* LikePopOverViewController.xib */,
+				95CF4B6220CFA4C900504254 /* LikePopoverViewController.swift */,
+				95CF4B6320CFA4C900504254 /* LikePopoverViewController.xib */,
 			);
 			path = LikePopoverView;
 			sourceTree = "<group>";
@@ -491,7 +491,7 @@
 				95DAB67320C768500042613E /* ProfileViewController.xib in Resources */,
 				9560D3FC20C63EDE008E544A /* FeedTableViewCell.xib in Resources */,
 				95DAB68820C7CBE40042613E /* ProfileTableViewCell.xib in Resources */,
-				95CF4B6520CFA4C900504254 /* LikePopOverViewController.xib in Resources */,
+				95CF4B6520CFA4C900504254 /* LikePopoverViewController.xib in Resources */,
 				95AD675720C68BB00005CD7C /* StoryCollectionViewCell.xib in Resources */,
 				95AD674F20C68B900005CD7C /* ItemPhotoView.xib in Resources */,
 				9560D40020C63EDE008E544A /* NewsfeedViewController.xib in Resources */,
@@ -555,7 +555,7 @@
 				95EA50A420BBF2F700B298AA /* AppDelegate.swift in Sources */,
 				9560D3EB20C63EAA008E544A /* NewsFeedViewModel.swift in Sources */,
 				9560D3E120C63E75008E544A /* APIServices.swift in Sources */,
-				95CF4B6420CFA4C900504254 /* LikePopOverViewController.swift in Sources */,
+				95CF4B6420CFA4C900504254 /* LikePopoverViewController.swift in Sources */,
 				9560D41220C64194008E544A /* UIImageExtension.swift in Sources */,
 				95E0603520C8C0940098F24A /* StoriesTableViewCell.swift in Sources */,
 			);
@@ -693,7 +693,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FBNewFeeds/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -703,6 +703,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = anhnt.FBNewFeeds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -712,7 +713,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FBNewFeeds/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -722,6 +723,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = anhnt.FBNewFeeds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LikePopoverViewController">
+            <connections>
+                <outlet property="emojiStackView" destination="jFw-JJ-PNl" id="IpT-VT-cAH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jFw-JJ-PNl">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="40"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" tag="1" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-like2" translatesAutoresizingMaskIntoConstraints="NO" id="dkL-I3-Oms">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" tag="2" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-love" translatesAutoresizingMaskIntoConstraints="NO" id="0Jl-ou-luh">
+                            <rect key="frame" x="40" y="0.0" width="40" height="40"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" tag="3" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-haha" translatesAutoresizingMaskIntoConstraints="NO" id="7Wb-5C-kWk">
+                            <rect key="frame" x="80" y="0.0" width="40" height="40"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" tag="4" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-wow" translatesAutoresizingMaskIntoConstraints="NO" id="95L-wL-EYE">
+                            <rect key="frame" x="120" y="0.0" width="40" height="40"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" tag="5" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-sad" translatesAutoresizingMaskIntoConstraints="NO" id="r30-VK-cku">
+                            <rect key="frame" x="160" y="0.0" width="40" height="40"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" tag="6" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-agrry" translatesAutoresizingMaskIntoConstraints="NO" id="IwF-zL-mrE">
+                            <rect key="frame" x="200" y="0.0" width="40" height="40"/>
+                        </imageView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jFw-JJ-PNl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="E5Q-z1-Dov"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jFw-JJ-PNl" secondAttribute="trailing" id="NWv-JV-OXW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jFw-JJ-PNl" secondAttribute="bottom" id="SWq-Om-L6e"/>
+                <constraint firstItem="jFw-JJ-PNl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="iEY-1E-Vli"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-45.5" y="226"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic-agrry" width="24" height="24"/>
+        <image name="ic-haha" width="24" height="24"/>
+        <image name="ic-like2" width="24" height="24"/>
+        <image name="ic-love" width="24" height="24"/>
+        <image name="ic-sad" width="24" height="24"/>
+        <image name="ic-wow" width="24" height="24"/>
+    </resources>
+</document>

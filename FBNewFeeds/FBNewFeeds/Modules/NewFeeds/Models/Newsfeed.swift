@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Newsfeed: Codable {
+class Newsfeed: Codable {
 
 	let stories: [Stories]?
 	let feeds: [Feeds]?
@@ -18,7 +18,7 @@ struct Newsfeed: Codable {
 		case feeds
 	}
 
-	init(from decoder: Decoder) throws {
+    required init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
 		stories = try values.decodeIfPresent([Stories].self, forKey: .stories)
 		feeds = try values.decodeIfPresent([Feeds].self, forKey: .feeds)

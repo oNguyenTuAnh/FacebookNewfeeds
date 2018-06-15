@@ -15,5 +15,7 @@ class AppColor {
     static let iconTabbarSelectColor = UIColor.fromHex("658ff7")
     static let searchBarColor = UIColor.fromHex("2d487c")
     static let borderItemStoryColor = UIColor.fromHex("507df7")
+    static let defaultButtonColor = UIColor.fromHex("91949b")
+    static let selectedButtonColor = UIColor.fromHex("4a66ad")
 
 }

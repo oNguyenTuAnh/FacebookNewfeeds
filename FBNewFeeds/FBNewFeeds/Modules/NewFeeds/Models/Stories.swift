@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Stories: Codable {
+class Stories: Codable {
 
 	let storyImageUrl: String?
 	let fullName: String?
@@ -18,7 +18,7 @@ struct Stories: Codable {
 		case fullName
 	}
 
-	init(from decoder: Decoder) throws {
+	required init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
 		storyImageUrl = try values.decodeIfPresent(String.self, forKey: .storyImageUrl)
 		fullName = try values.decodeIfPresent(String.self, forKey: .fullName)
