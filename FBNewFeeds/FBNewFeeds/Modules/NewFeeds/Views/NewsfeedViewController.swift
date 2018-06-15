@@ -53,7 +53,7 @@ class NewsfeedViewController: BaseViewController {
     func showPopoverEmoji(_ view: UIView, _ index: IndexPath) {
         let emojiView = LikePopoverViewController.instantiateFromNib()
         emojiView.modalPresentationStyle = .popover
-        emojiView.preferredContentSize = CGSize(width: 240, height: 30)
+        emojiView.preferredContentSize = CGSize(width: 246, height: 40)
         emojiView.selectEmojiClosure = { [weak self] (imageView, gesture) in
             self?.animationImage(imageView, gesture, index)
         }
